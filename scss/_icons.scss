@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+10.0 Icons
+--------------------------------------------------------------*/
+#redArrow{
+	margin-top: 4px;
+	display: inline-block;
+  width: 20px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: $accentColor;
+  fill: $accentColor;
+}
+.footerSocialIcon{
+	stroke: $white;
+  fill: $white;
+	-webkit-transition: .3s ease all;
+	transition: .3s ease all;
+	height: 25px;
+	width: 25px;
+		&:hover{
+			box-shadow: 2px 2px 5px rgba(42, 42, 42, .4);
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
+		}
+}
+.smallIcon{
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.icon{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  stroke-width: 0;
+  stroke: $white;
+  fill: $white;
+}
+.redIcon{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  stroke-width: 0;
+  stroke: $accentColor;
+  fill: $accentColor;
+}
+.socialPadding {
+	padding: 0 10px;
+	margin-bottom: -9px;
+}
+.socialIcon {
+	width: 75%;
+}

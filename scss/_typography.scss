@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+7.0 Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #000000;
+	font-family: $roboto;
+	font-size: 18px;
+	line-height: 1.6em;
+	@include breakpoint (largeMobileScreen) {
+		font-size: 20px;
+	}
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: $roboto;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: 700;
+	line-height: 1.4em;
+	margin-top: 0;
+	margin-bottom: 0;
+	@include breakpoint (laptopScreen) {
+		font-size: 1.7em;
+	}
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1em !important;
+}
+.whiteText {
+	color: $white;
+}
+.headlineText {
+	color: #000000;
+}
+.subheadText {
+	color: #000000;
+}
+.redText {
+	color: $accentColor;
+}
+.centerText{
+	text-align: center;
+}
+.largeHeading {
+	font-size: 1.7em;
+	font-weight: 700;
+}
+.mediumHeading {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.smallHeading {
+	font-size: .8em;
+	margin-bottom: 0;
+}
+.underline {
+  background-image: -webkit-linear-gradient(left, $accentColor 100%, transparent 0);
+  background-image: linear-gradient(to right, $accentColor 100%, transparent 0);
+  background-position: 0 1.06em;
+  background-repeat: repeat-x;
+  background-size: 8px 5px;
+}
+.fontLight {
+	font-weight: 400;
+}

@@ -1,0 +1,31 @@
+/*
+Theme Name: insightcustom
+Theme URI: https://seejustincode.com/
+Author: Justin Parsons
+Author URI: https://seejustincode.com/
+Description: Custom WordPress theme for Insight Creative
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: insightcustom
+*/
+@import '_normalize';
+@import '_variables';
+@import '_breakpoints';
+@import '_layout';
+@import '_header';
+@import '_footer';
+@import '_typography';
+@import '_buttons';
+@import '_general';
+@import '_icons';
+@import '_home';
+@import '_services';
+@import '_contact';
+@import '_about';
+@import '_sitemap';
+@import '_archive';
+@import '_privacy';
+@import '_breadcrumbs';
+@import '_404';
+@import '_search';

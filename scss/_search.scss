@@ -1,0 +1,89 @@
+#searchFormWrap {
+  text-align: center;
+  padding: 10px;
+  display: none;
+  form {
+    display: flex;
+    flex-direction: row;
+    label {
+      width: 100%;
+    }
+  }
+  input {
+    width: 100%;
+    background-color: $charcoal;
+    border: 1px solid $black;
+    padding: 10px;
+  }
+  input::-webkit-input-placeholder {
+    color: $white;
+  }
+  input::-moz-placeholder {
+    color: $white;
+  }
+  input:-ms-input-placeholder {
+    color: $white;
+  }
+  input::-ms-input-placeholder {
+    color: $white;
+  }
+  input::placeholder {
+    color: $white;
+  }
+}
+.searchOpen {
+  display: block !important;
+}
+#search {
+  padding: 0 10px;
+}
+.searchForm {
+	background-color: $accentColor;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+		label {
+				display: none;
+		}
+	@include breakpoint (laptopScreen) {
+		height: auto;
+		-webkit-box-align: normal;
+		    -ms-flex-align: normal;
+		            -ms-grid-row-align: normal;
+		        align-items: normal;
+	}
+}
+.searchField{
+	font-family: $roboto;
+	font-size: 12px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 30px;
+	height: 30px;
+	padding: 10px;
+	@include breakpoint (smallScreen) {
+		width: 90%;
+	}
+	@include breakpoint (largeMobileScreen) {
+		width: 90%;
+	}
+	@include breakpoint (laptopScreen) {
+		width: 175px;
+	}
+}
+.searchIcon {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	right: 30px;
+	@include breakpoint (laptopScreen) {
+		top: 5px;
+	}
+}

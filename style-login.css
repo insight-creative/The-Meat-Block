@@ -1,0 +1,32 @@
+body.login {
+  background-color: #000000;
+}
+#login h1 a, .login h1 a {
+  background-image: url("/wp-content/uploads/2019/09/meat_block_logo_no_tagline_small.png");
+  height:65px;
+  width:320px;
+  background-size: 320px 65px;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+body.login div#login form#loginform {
+  background: #b6ae8c;
+}
+body.login div#login form#loginform p label {
+  color: #ffffff;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+  background-color: #ffffff;
+  color: #b6ae8c;
+  transition: .2s ease all;
+  text-shadow: none;
+  border: none;
+}
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+  background-color: #f6f6f6;
+  color: #ffffff;
+  transition: .2s ease all;
+}
+.login #login_error, .login .message, .login .success {
+  border-left: 4px solid #b6ae8c;
+}

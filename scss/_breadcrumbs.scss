@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+28.0 Breadcrumbs Navigation
+--------------------------------------------------------------*/
+.breadcrumbs {
+	background-color: $accentColor;
+  color: $white;
+  font-size: 14px;
+	text-transform: uppercase;
+	font-family: $roboto;
+	a {
+		color: $white;
+		font-family: $roboto;
+		text-transform: uppercase;
+    -webkit-transition: .3s ease-out all;
+    transition: .3s ease-out all;
+    &:hover {
+      color: $accentColor;
+      -webkit-transition: .3s ease-out all;
+      transition: .3s ease-out all;
+    }
+	}
+}
+#breadcrumbs {
+	margin-left: 20px !important;
+}
