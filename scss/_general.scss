@@ -5,23 +5,15 @@ body{
 	background: $white;
 	margin: 0;
 }
-
 // Style highlight to match our themes colors
 ::-moz-selection{
-		background: rgba(	183, 0, 51, .5);
-}
-// Style highlight to match our themes colors
-::-moz-selection{
-		background: rgba(	183, 0, 51, .5);
+		background: rgba( 182, 174, 140, .5);
 }
 ::selection{
-		background: rgba(	183, 0, 51, .5);
-}
-::-moz-selection{
-	background: rgba(	183, 0, 51, .5);
+		background: rgba( 182, 174, 140, .5);
 }
 ::-ms-selection{
-	background: rgba(	183, 0, 51, .5);
+	background: rgba( 182, 174, 140, .5);
 }
 #privacyPolicy{
 	@include breakpoint(smallScreen){
@@ -30,22 +22,6 @@ body{
 	@include breakpoint(largeMobileScreen){
 			margin-top: 125px;
 	}
-}
-/*
- *  Style for our scrollbar, yeah it won't work in most browsers but still a cool custom touch for anyone using chrome
- */
-::-webkit-scrollbar-track{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
-    background-color: #CCCCCC;
-}
-
-::-webkit-scrollbar{
-    width: 12px;
-    background-color: $lightGrey;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: $accentColor;
 }
 ul {
 	padding: 0;

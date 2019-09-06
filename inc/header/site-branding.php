@@ -13,11 +13,13 @@
     <?php the_field('store_hours', 'option'); ?>
   </div>
   <div id="siteLogo">
-    <?php
-      $image = get_field('store_logo', 'option');
-      $imageID = $image['ID'];
-      echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
-    ?>
+    <a href="https://woocommerce-154794-977005.cloudwaysapps.com/">
+      <?php
+        $image = get_field('store_logo', 'option');
+        $imageID = $image['ID'];
+        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+      ?>
+    </a>
   </div>
   <div id="miniNav">
     <div id="cartWrapper" class="centerAlignedContainer">

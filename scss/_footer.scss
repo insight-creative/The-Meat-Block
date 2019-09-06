@@ -6,7 +6,7 @@
 	z-index: 2;
 	width: 100%;
 	margin: 0 auto;
-	background-color: $accentColor;
+	background-color: $trueBlack;
 	a {
 		&:after {
 			width: 0;
@@ -14,36 +14,42 @@
 	}
 }
 .footerContent{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	    -ms-flex-direction: column-reverse;
-	        flex-direction: column-reverse;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	@include breakpoint (laptopScreen) {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
+	padding: 0;
+	background-image: url('/wp-content/uploads/2019/09/fire-cropped.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	@include breakpoint (tabletScreen) {
+		padding: 20px;
 	}
+	p {
+		font-size: 16px;
+		line-height: 1.4em;
+		max-width: 600px;
+	}
+}
+#footerContentInner {
+	justify-content: space-between;
+	position: relative;
+	background-color: $trueBlack;
+	padding: 20px 0;
+	@include breakpoint (laptopScreen) {
+		padding: 20px;
+		top: -50px;
+	}
+}
+#footerContentBottom {
+	padding-bottom: 100px;
 }
 #copyright{
 	color: $white;
-	font-size: 10px;
+	font-size: 14px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-top: 2px;
 		p{
 			margin-top: 0;
 			margin-bottom: 0 !important;
@@ -54,29 +60,18 @@
           -ms-flex-direction: row;
               flex-direction: row;
     }
+		a {
+			margin: 0 5px;
+		}
 }
 .footerLinkWrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	.searchForm {
-		@include breakpoint (laptopScreen) {
-				margin-left: 10px;
-		}
-	}
-	@include breakpoint (laptopScreen) {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-	}
 }
 #FooterMenu {
 	-webkit-margin-before: 0;
@@ -89,26 +84,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	    -ms-flex-direction: column-reverse;
-	        flex-direction: column-reverse;
-	@include breakpoint (largeMobileScreen) {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-	}
+  flex-direction: column;
 	li{
-		padding: 10px 10px;
 		list-style-type: none;
 		a{
-			text-decoration: none;
-			color: $white;
 			font-family: $roboto;
-			text-transform: uppercase;
-			font-size: 10px;
-			font-weight: 500;
+			font-size: 16px;
 			-webkit-transition: .2s ease;
 			transition: .2s ease;
 			&:hover{
@@ -120,13 +101,37 @@
 	}
 }
 .socialWrapper{
-	margin-top: 20px;
+	margin: 20px 0;
 	@include breakpoint (laptopScreen) {
-		margin-top: 0;
+		margin: 0;
 	}
-	a{
-		text-decoration: none;
-		width: 100%;
-		height: auto;
+}
+#social {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+#footerSecond {
+	background-color: $black;
+	padding: 20px;
+}
+#brandLogos {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	justify-content: center;
+	@include breakpoint (laptopScreen) {
+		justify-content: flex-start;
+	}
+	img {
+		width: auto;
+		height: 30px;
+		margin: 0 10px;
+		@include breakpoint (largeMobileScreen) {
+			height: 50px;
+		}
+		@include breakpoint (tabletScreen) {
+			height: 60px;
+		}
 	}
 }

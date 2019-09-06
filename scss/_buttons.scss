@@ -10,7 +10,6 @@ a,a:visited,a:hover,a:active{
 	transition: .1s ease;
 }
 a:hover{
-	font-weight: 700;
 	transition: .1s ease;
 }
 a.before:before,a.after:after{
@@ -33,6 +32,35 @@ a.third:after,a.sixth:before,a.sixth:after{
 }
 a.before:hover:before,a.after:hover:after{
   width: 0%;
+}
+.site-main {
+	a{
+		position: relative;
+	  transition: 0.5s color ease;
+		text-decoration: none;
+		color: $accentColor;
+		font-weight: 500;
+		transition: .1s ease;
+		&:before {
+			content: "";
+		  transition: 0.5s all ease;
+		  position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background: $accentColor;
+			left: 50%;
+		  -webkit-transform: translateX(-50%);
+		  transform: translateX(-50%);
+		}
+		&:hover {
+			&:before {
+				width: 0;
+				transition: 0.5s all ease;
+			}
+		}
+	}
 }
 .whiteButton{
 	position: relative;
@@ -88,7 +116,38 @@ a.before:hover:before,a.after:hover:after{
 			color: $white;
     }
 }
-
+.primaryButtonAlt{
+	position: relative;
+	z-index:1;
+  font-family: $roboto !important;
+	font-weight: 700 !important;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+	border: 2px solid $trueBlack;
+	background: $trueBlack;
+	padding: 10px 25px;
+	color: $white !important;
+	-webkit-transition: .3s ease !important;
+	transition: .3s ease !important;
+	cursor: pointer;
+  white-space: nowrap;
+    &:hover{
+      background: $charcoal;
+			border: 2px solid $charcoal;
+			box-shadow: 0 6px 18px 0 rgba(0,0,0,.5);
+    	-webkit-transition: .3s ease;
+    	transition: .3s ease;
+			color: $white;
+    }
+}
+.buttonWrapper {
+	a {
+		&:before {
+			width: 0%;
+		}
+	}
+}
 .plainLink {
 	text-decoration: none;
 	color: $accentColor;

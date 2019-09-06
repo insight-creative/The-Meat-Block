@@ -34,7 +34,7 @@
 	}
 }
 #mastheadContainer {
-	background: $black;
+	background: $trueBlack;
 }
 #mastheadInner {
 	display: -webkit-box;
@@ -98,8 +98,14 @@
 	justify-content: flex-end;
 }
 .main-menu-wrapper {
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
+	//background-image: url('/wp-content/uploads/2019/09/wood-cropped.jpg');
+	//background-size: cover;
+	//background-repeat: no-repeat;
+	@include breakpoint (laptopScreen) {
+		width: 95%;
+	}
 	@include breakpoint (largeScreen) {
 		width: 60%;
 	}
@@ -138,7 +144,7 @@
 }
 .hasMegaMenu {
 	position: static;
-	background-color: $charcoal;
+	background-color: $trueBlack;
 	@include breakpoint (laptopScreen) {
 		background-color: $white;
 	}
@@ -293,7 +299,7 @@
 #closeMenu {
 	background-color: $accentColor;
 	color: $white;
-	padding: 5px;
+	padding: 10px;
 	@include breakpoint (laptopScreen) {
 		display: none;
 	}

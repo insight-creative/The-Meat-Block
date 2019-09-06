@@ -17,6 +17,9 @@
           <i class="fas fa-search"></i>
         </button>
       </div>
+      <div id="mobileSearch">
+        <?php get_search_form(); ?>
+      </div>
       <button id="closeMenu">
         <i class="fas fa-chevron-up"></i><span id="close">Close</span><i class="fas fa-chevron-up"></i>
       </button>
