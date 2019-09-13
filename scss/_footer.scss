@@ -15,8 +15,8 @@
 }
 .footerContent{
 	padding: 0;
-	background-image: url('/wp-content/uploads/2019/09/fire-cropped.jpg');
-	background-size: contain;
+	background-image: url('/wp-content/uploads/2019/09/fire-background-1.jpg');
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	@include breakpoint (tabletScreen) {
@@ -93,7 +93,7 @@
 			-webkit-transition: .2s ease;
 			transition: .2s ease;
 			&:hover{
-				color: $accentColor;
+				color: $white;
 				-webkit-transition: .2s ease;
 				transition: .2s ease;
 			}
@@ -102,13 +102,27 @@
 }
 .socialWrapper{
 	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	@include breakpoint (laptopScreen) {
 		margin: 0;
 	}
+	img {
+		margin: 20px auto 0;
+		width: 30%;
+		@include breakpoint (largeMobileScreen) {
+			width: 20%;
+		}
+		@include breakpoint (laptopScreen) {
+			width: 60%;
+		}
+		@include breakpoint (extraLargeScreen) {
+			width: 40%;
+		}
+	}
 }
 #social {
-	display: flex;
-	justify-content: center;
 	margin-top: 10px;
 }
 #footerSecond {
@@ -119,10 +133,7 @@
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;
-	justify-content: center;
-	@include breakpoint (laptopScreen) {
-		justify-content: flex-start;
-	}
+	justify-content: flex-start;
 	img {
 		width: auto;
 		height: 30px;

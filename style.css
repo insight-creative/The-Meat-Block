@@ -570,7 +570,8 @@ Font Variables
   background: #f6f6f6; }
 
 .blackBack {
-  background-color: #000000; }
+  background-color: #000000;
+  padding: 10px 20px; }
 
 .page-content {
   position: relative;
@@ -662,7 +663,7 @@ Font Variables
   background-repeat: no-repeat; }
   .twoCol h6 {
     padding: 20px;
-    font-size: 1.4em; }
+    font-size: 1.6em; }
 
 .threeCol {
   height: 250px;
@@ -675,6 +676,9 @@ Font Variables
   .threeCol:hover .smallArrow {
     margin-left: 15px;
     transition: .2s ease; }
+  .threeCol a:hover:before {
+    width: 0;
+    transition: 0.5s all ease; }
 
 .colLeft {
   margin-bottom: 15px; }
@@ -682,6 +686,8 @@ Font Variables
     .colLeft {
       margin-right: 10px;
       margin-bottom: 0; } }
+  .colLeft .image {
+    width: 40%; }
 
 .colMiddle {
   margin: 10px 0 15px 0; }
@@ -695,6 +701,13 @@ Font Variables
     .colRight {
       margin-left: 10px;
       margin-top: 0; } }
+  .colRight .image {
+    width: 40%; }
+
+.colLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 /*--------------------------------------------------------------
 5.0 Header Styling
@@ -813,7 +826,7 @@ Font Variables
     border-bottom: 1px solid #f6f6f6; }
     @media (min-width: 992px) {
       .main-menu li {
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px 5px;
         border-bottom: none; } }
   .main-menu a {
@@ -1235,8 +1248,8 @@ nav {
 
 .footerContent {
   padding: 0;
-  background-image: url("/wp-content/uploads/2019/09/fire-cropped.jpg");
-  background-size: contain;
+  background-image: url("/wp-content/uploads/2019/09/fire-background-1.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center; }
   @media (min-width: 768px) {
@@ -1310,19 +1323,32 @@ nav {
       -webkit-transition: .2s ease;
       transition: .2s ease; }
       #FooterMenu li a:hover {
-        color: #b6ae8c;
+        color: #FFFFFF;
         -webkit-transition: .2s ease;
         transition: .2s ease; }
 
 .socialWrapper {
-  margin: 20px 0; }
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
   @media (min-width: 992px) {
     .socialWrapper {
       margin: 0; } }
+  .socialWrapper img {
+    margin: 20px auto 0;
+    width: 30%; }
+    @media (min-width: 600px) {
+      .socialWrapper img {
+        width: 20%; } }
+    @media (min-width: 992px) {
+      .socialWrapper img {
+        width: 60%; } }
+    @media (min-width: 1600px) {
+      .socialWrapper img {
+        width: 40%; } }
 
 #social {
-  display: flex;
-  justify-content: center;
   margin-top: 10px; }
 
 #footerSecond {
@@ -1333,10 +1359,7 @@ nav {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  justify-content: center; }
-  @media (min-width: 992px) {
-    #brandLogos {
-      justify-content: flex-start; } }
+  justify-content: flex-start; }
   #brandLogos img {
     width: auto;
     height: 30px;
@@ -1408,7 +1431,7 @@ p {
 
 .whiteGlow {
   color: #000000;
-  text-shadow: 0 0 20px #FFFFFF; }
+  text-shadow: 5px 5px 10px #FFFFFF; }
 
 .blackShadow {
   color: #FFFFFF;
@@ -1420,8 +1443,31 @@ p {
 .subheadText {
   color: #000000; }
 
-.redText {
-  color: #b6ae8c; }
+.blockTitle {
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-family: almaq-rough, sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px; }
+  @media (min-width: 600px) {
+    .blockTitle {
+      font-size: 2em; } }
+  @media (min-width: 992px) {
+    .blockTitle {
+      font-size: 3em; } }
+
+.heroSubtitle {
+  font-family: Veltro-Reg;
+  text-transform: initial;
+  font-size: 2.8em;
+  line-height: 1em;
+  font-weight: normal;
+  position: relative;
+  top: -25px; }
+  @media (min-width: 600px) {
+    .heroSubtitle {
+      font-size: 3.6em; } }
 
 .centerText {
   text-align: center; }
@@ -1816,25 +1862,14 @@ ul {
 .homeHero {
   background-image: url("/wp-content/uploads/2019/09/Screen-Shot-2019-08-12-at-4.08.54-PM.png"); }
 
-.blockTitle {
-  padding: 10px;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  font-family: almaq-rough, sans-serif;
-  font-weight: 500;
-  letter-spacing: 5px; }
-  @media (min-width: 600px) {
-    .blockTitle {
-      font-size: 2em; } }
-  @media (min-width: 992px) {
-    .blockTitle {
-      font-size: 3em; } }
-
 .iconWrap img {
   width: 20%;
   height: auto;
   position: relative;
-  top: -35px; }
+  top: -20px; }
+  @media (min-width: 992px) {
+    .iconWrap img {
+      top: -30px; } }
 
 .logoWrap img {
   width: 70%;
@@ -1846,12 +1881,12 @@ ul {
   background-position: center center; }
 
 #featuredProducts {
-  background-image: url("/wp-content/uploads/2019/09/Screen-Shot-2019-08-12-at-3.51.13-PM.png");
+  background-image: url("/wp-content/uploads/2019/09/wood-grain-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
 
-.featuredTitle {
+.featured {
   background-color: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
   padding: 10px;
@@ -1859,24 +1894,24 @@ ul {
   width: 100%;
   transition: .2s ease; }
   @media (min-width: 600px) {
-    .featuredTitle {
+    .featured {
       height: 40%; } }
   @media (min-width: 768px) {
-    .featuredTitle {
+    .featured {
       height: 70%; } }
   @media (min-width: 992px) {
-    .featuredTitle {
+    .featured {
       height: 60%; } }
   @media (min-width: 1900px) {
-    .featuredTitle {
+    .featured {
       height: 50%; } }
-  .featuredTitle h6 {
+  .featured h6 {
     color: #FFFFFF !important;
     text-transform: uppercase;
     font-size: 1.4em;
     line-height: 1em;
     margin-bottom: 0; }
-  .featuredTitle p {
+  .featured p {
     font-size: 18px;
     margin-bottom: 0 !important;
     line-height: 1.2em;
@@ -1905,6 +1940,63 @@ ul {
 
 .logo {
   max-width: 450px; }
+
+#testimonial .fullWidthBlock {
+  padding: 200px 0; }
+
+.testimonialWrapper {
+  height: 100px; }
+  @media (min-width: 1400px) {
+    .testimonialWrapper {
+      height: 300px; } }
+
+.testimonialInner {
+  display: flex;
+  justify-content: flex-end; }
+
+.testimonial {
+  width: 100%;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px #000000;
+  font-weight: 700; }
+  @media (min-width: 768px) {
+    .testimonial {
+      width: 60%; } }
+  @media (min-width: 992px) {
+    .testimonial {
+      width: 40%; } }
+
+.divider {
+  position: relative;
+  height: 1px; }
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, white, transparent); }
+
+.div-arrow-down:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  left: calc(50% - 10px);
+  width: 25px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: white;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF; }
+
+#outdoorLiving .div-arrow-down:after {
+  background-color: #e9e3e0;
+  border-bottom: 1px solid #e9e3e0;
+  border-right: 1px solid #e9e3e0; }
 
 /*--------------------------------------------------------------
 12.0 Services

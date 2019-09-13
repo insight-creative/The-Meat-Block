@@ -13,6 +13,7 @@
 	<link href="/wp-content/uploads/2019/08/favicon.png" rel="shortcut icon">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.typekit.net/llp7vmt.css">
+	<link href="/wp-content/themes/insightCustom/css/MyFontsWebfontsKit.css" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

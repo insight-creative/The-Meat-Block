@@ -8,9 +8,9 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footerContent">
 			<div id="footerContentInner" class="pageWidth flex-container">
+				<?php get_template_part("/inc/footer/footer-nav"); ?>
 				<?php get_template_part("/inc/footer/contact"); ?>
 				<?php get_template_part("/inc/footer/hours"); ?>
-				<?php get_template_part("/inc/footer/footer-nav"); ?>
 				<?php get_template_part("/inc/footer/socialNav"); ?>
 			</div>
 			<div id="footerContentBottom" class="pageWidth flex-container">

@@ -246,6 +246,7 @@
 }
 .blackBack {
 	background-color: $trueBlack;
+	padding: 10px 20px;
 }
 .page-content{
 	position: relative;
@@ -337,7 +338,7 @@
 	background-repeat: no-repeat;
 	h6 {
 		padding: 20px;
-		font-size: 1.4em;
+		font-size: 1.6em;
 	}
 }
 .threeCol {
@@ -354,12 +355,23 @@
 			transition: .2s ease;
 		}
 	}
+	a {
+		&:hover {
+			&:before {
+				width: 0;
+				transition: 0.5s all ease;
+			}
+		}
+	}
 }
 .colLeft {
 	margin-bottom: 15px;
 	@include breakpoint (tabletScreen) {
 		margin-right: 10px;
 		margin-bottom: 0;
+	}
+	.image {
+		width: 40%;
 	}
 }
 .colMiddle {
@@ -374,4 +386,12 @@
 		margin-left: 10px;
 		margin-top: 0;
 	}
+	.image {
+		width: 40%;
+	}
+}
+.colLogo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
