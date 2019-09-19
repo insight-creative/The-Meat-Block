@@ -1,6 +1,6 @@
 <div class="col70 whiteText">
   <h6 class="accentText">The Meat Block Brands</h6>
-  <div id="brandLogos">
+  <div class="brandLogos">
     <?php
       $image = get_field('brand_logo_1', 'option');
       $imageID = $image['ID'];

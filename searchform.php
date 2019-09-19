@@ -8,6 +8,6 @@
     </label>
     <button type="submit" class="search-submit whiteText"><!-- TODO: clean this up -->
       <span class="screen-reader-text"><?php echo esc_attr_x( 'Search', 'submit button' ) ?></span>
-      <i class="fas fa-search"></i>
+      <i class="whiteIcon fas fa-search"></i>
     </button>
 </form>

@@ -29,6 +29,7 @@
 	width: 100vw;
 	-webkit-transition: .3s ease;
 	transition: .3s ease;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 	@include breakpoint (tabletScreen) {
 		position: fixed;
 	}
@@ -57,8 +58,16 @@
 		-webkit-transition: .3s ease;
 		transition: .3s ease;
 		@include breakpoint (laptopScreen) {
-			-webkit-transform: translateY(-150px);
-			        transform: translateY(-150px);
+			-webkit-transform: translateY(-85px);
+			        transform: translateY(-85px);
+		}
+		@include breakpoint (largeScreen) {
+			-webkit-transform: translateY(-100px);
+			        transform: translateY(-100px);
+		}
+		@include breakpoint (extraLargeScreen) {
+			-webkit-transform: translateY(-120px);
+			        transform: translateY(-120px);
 		}
 }
 #hours {
@@ -75,7 +84,7 @@
 	margin: 0 auto;
 	text-align: center;
 	max-width: 200px;
-	width: 45%;
+	width: 40%;
 	padding-top: 10px;
 	@include breakpoint (laptopScreen) {
 		max-width: 450px;
@@ -85,7 +94,7 @@
 }
 #miniNav {
 	font-size: 14px;
-	width: 25%;
+	width: 30%;
 	display: flex;
 	justify-content: flex-end;
 	@include breakpoint (laptopScreen) {
@@ -178,6 +187,9 @@
 		font-family: $roboto;
 	}
 }
+.sub-menu:first-of-type {
+	border-top: 3px solid $charcoal;
+}
 .megaMenuColumn {
 	padding: 0 !important;
 	a {
@@ -254,6 +266,11 @@
 		}
 	}
 }
+#searchWrap {
+	button {
+		color: $trueBlack;
+	}
+}
 .cart-contents:before {
     font-family: WooCommerce;
     content: "\e01d";
@@ -312,17 +329,7 @@
 	a {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 		position: relative;
-		&:after{
-			position: absolute;
-			content: "";
-			background: $accentColor;
-			bottom: -5px !important;
-			right: 0;
-			width: 100%;
-			height: 4px;
-			opacity: 1 !important;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		}
+		color: $accentColor !important;
 	}
 }
 .menuLinkWrap{
@@ -423,9 +430,12 @@ nav{
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
-	width: 30%;
+	width: 15%;
 		@include breakpoint(smallScreen){
 			padding: 15px 0 15px 15px;
+		}
+		@include breakpoint (largeMobileScreen) {
+			width: 20%;
 		}
 		@include breakpoint(laptopScreen){
 			display: none;

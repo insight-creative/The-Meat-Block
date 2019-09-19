@@ -17,11 +17,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<?php get_template_part('/inc/breadcrumbs'); ?>
-			<?php get_template_part('/inc/simple-hero'); ?>
-			<section id="simplePageContent" class="greyBlock paddedSection">
-				<div class="limitWidth">
-					<div class="textWrap">
+			<section class="paddedSection">
+				<div class="pageWidth limitWidth">
 						<?php
 						while ( have_posts() ) :
 							the_post();
@@ -32,10 +29,10 @@ get_header();
 							endif;
 						endwhile; // End of the loop.
 						?>
-					</div>
 				</div>
 			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<script src="/wp-content/themes/insightCustom/js/accordion.js"></script>
 <?php
 get_footer();

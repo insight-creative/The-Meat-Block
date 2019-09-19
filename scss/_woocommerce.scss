@@ -1,0 +1,16 @@
+.related {
+  padding-bottom: 25px;
+}
+button {
+	color: $white;
+	text-transform: uppercase;
+}
+.woocommerce-info {
+	border-top-color: $accentColor !important;
+}
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+	border-top-color: $accentColor !important;
+}
+.woocommerce-info::before {
+	color: $accentColor !important;
+}

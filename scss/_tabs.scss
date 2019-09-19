@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+19.0 Tabs
+--------------------------------------------------------------*/
+.grid {
+	 list-style: none;
+	 margin-left: -40px;
+}
+.destinationTab {
+	 position: relative;
+	 max-width: 900px;
+}
+.destinationTab .menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.destinationTab .menu div {
+	 width: 50%;
+	 padding: 15px 20px 15px 40px;
+	 margin-bottom: 10px;
+	 color: $brandColor;
+	 background: $white;
+	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	 cursor: pointer;
+	 position: relative;
+	 vertical-align: middle;
+	 font-weight: 700;
+	 -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.destinationTab .menu div:hover {
+ 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.destinationTab .menu div span.light {
+	 height: 10px;
+	 width: 10px;
+	 position: absolute;
+	 top: 24px;
+	 left: 15px;
+	 background-color: $brandColor;
+	 border-radius: 100%;
+	 -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.destinationTab .menu div.active span.light {
+	 background-color: $white;
+	 left: 0;
+	 height: 100%;
+	 width: 3px;
+	 top: 0;
+	 border-radius: 0;
+}
+.destinationTab .menu div.active {
+	 color: $white;
+	 background-color: $brandColor;
+	 padding: 15px 20px 15px 20px;
+}
+ul.nacc {
+	 position: relative;
+	 height: 0px;
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+	 -webkit-transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	 transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ul.nacc li {
+	 opacity: 0;
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	 position: absolute;
+	 list-style: none;
+	 -webkit-transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	 margin-left: 20px;
+}
+ul.nacc li p {
+		&:before {
+			position: absolute;
+			left: -30px;
+			background: $headlineText;
+			border-radius: 50%;
+			height: 18px;
+			width: 18px;
+			content: "";
+			margin-top: 7px;
+		}
+}
+ul.nacc li.active {
+	z-index: 2;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	&:after {
+		position: absolute;
+		top: 10px;
+		left: -22px;
+		content: "";
+		height: calc(100% - 45px);
+		width: 2px;
+		background-color: $headlineText;
+	}
+}
+ul.nacc li p {
+ 	margin: 0;
+}
+.routeWrapper {
+	ul {
+		margin: 0 0 25px 25px;
+	}
+}

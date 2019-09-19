@@ -1,44 +1,68 @@
-/*--------------------------------------------------------------
-13.0 Contact Page
---------------------------------------------------------------*/
-#contact {
-  .col50 {
+/* 13.0 Contact Page stylings -------------------------------------------*/
+.page-id-520 {
+  .site-content {
+    margin-bottom: 25px;
+    margin-top: 70px;
     @include breakpoint (laptopScreen) {
-      padding-right: 20px;
+      margin-bottom: 50px;
+      margin-top: 150px;
     }
   }
 }
-.caldera-grid label, .awsm-job-form-inner label{
-  color: #000000 !important;
-  font-family: $roboto;
-  font-weight: 700;
-  text-transform: uppercase;
+#formWrapInner{
+  @include breakpoint(smallScreen){
+    padding: 0;
+  }
+  @include breakpoint(largeMobileScreen){
+    padding: 25px;
+  }
+}
+.smallMapWrapper{
+  padding: 40px 20px 20px 20px;
+}
+.caldera-grid label{
+  color: $black !important;
 }
 .field_required{
   color: $accentColor !important;
 }
-.CF5ce5ba5c3f551 input[type=text], .CF5ce5ba5c3f551 input[type=email],
-#fld_8239328_1, #fld_7683514_1{
-  box-shadow: 2px 2px 5px rgba(42, 42, 42, 0.3);
+.CF5c3c73e0407dd input[type=text], .CF5c3c73e0407dd input[type=email], #fld_7683514_1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 45px;
+  padding: .7em;
+  border: none;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(42, 42, 42, 0.4);
 }
-#CF5d2cc0bea8332_1-row-1 {
-  input {
-    box-shadow: 2px 2px 5px rgba(42, 42, 42, 0.3);
-  }
-}
-.caldera-grid a {
-  text-decoration: none !important;
-}
-.caldera-grid .breadcrumb>.active, .caldera-grid .breadcrumb>.active>a {
-  color: $accentColor !important;
-}
-.caldera-grid a:focus, .caldera-grid a:hover {
-  color: $accentColor !important;
-}
-.cf-page-btn-next {
-  float: right;
+#fld_7683514_1{
+  height: 100px;
 }
 .formWrapper{
   padding: 20px;
   background-color: $lightGrey;
+}
+#fld_7908577_1{
+  position: relative;
+	z-index:1;
+	text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+	color: $charcoal;
+	-webkit-transition: .2s ease all;
+	transition: .2s ease all;
+  padding: 10px 20px 10px 20px;
+	cursor: pointer;
+  border: none;
+  background: $accentColor;
+		&:hover{
+			-webkit-transition: .2s ease all;
+			transition: .2s ease all;
+      background: $charcoal;
+      color: $white;
+		}
 }

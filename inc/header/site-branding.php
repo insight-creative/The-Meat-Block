@@ -23,7 +23,7 @@
   </div>
   <div id="miniNav">
     <div id="cartWrapper" class="centerAlignedContainer">
-      <a href="#" id="shopButton" class="animated-button primaryButton">SHOP NOW</a>
+      <a href="/shop" id="shopButton" class="animated-button primaryButton">SHOP NOW</a>
       <?php global $woocommerce; ?>
        <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"
       title="<?php _e('Cart View', 'woothemes'); ?>">

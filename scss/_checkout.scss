@@ -1,0 +1,16 @@
+.woocommerce-checkout {
+  h3 {
+    background-color: $lightGrey;
+    padding: 10px;
+  }
+}
+.checkout-button {
+	background-color: $trueBlack !important;
+	color: $white;
+	transition: .2s ease;
+  text-transform: uppercase;
+	&:hover {
+		background-color: $charcoal !important;
+		transition: .2s ease;
+	}
+}

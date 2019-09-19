@@ -1,0 +1,87 @@
+.archive {
+  .site-content {
+    margin-top: 70px;
+    @include breakpoint (laptopScreen) {
+      margin-top: 170px;
+    }
+  }
+  .products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      @include breakpoint(largeMobileScreen) {
+        width: 44% !important
+      }
+      @include breakpoint(laptopScreen) {
+        width: 28% !important
+      }
+    }
+    .button {
+      background-color: $trueBlack;
+      color: $white;
+      transition: .2s ease;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $black;
+        color: $white;
+        transition: .2s ease;
+      }
+    }
+  }
+  .ui-slider-handle {
+    background-color: $accentColor !important;
+    border: 1px solid $accentColor !important;
+  }
+}
+.productContainer {
+  padding-bottom: 25px;
+  @include breakpoint (laptopScreen) {
+    padding-bottom: 50px;
+  }
+}
+.filter {
+  border-radius: 5px;
+  display: none;
+  @include breakpoint (tabletScreen) {
+    display: block;
+  }
+  @include breakpoint (laptopScreen) {
+    margin-top: 0;
+  }
+  .widget-title {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+.filterInner {
+  padding: 10px;
+}
+.berocket_aapf_widget-wrapper {
+  border-bottom: 1px solid $lightGrey;
+  padding: 20px 0 0 0;
+  .berocket_aapf_widget-title_div {
+    padding-top: 5px;
+    padding-bottom: 3px;
+  }
+  .widget-title {
+    font-size: 1.2em;
+  }
+  li {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+}
+.ul.berocket_aapf_widget {
+  margin-bottom: 20px;
+}
+.widget_recently_viewed_products {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.productWrapper {
+  padding: 10px 0;
+  @include breakpoint (laptopScreen) {
+    padding: 10px;
+  }
+}

@@ -15,25 +15,6 @@
 #text{
   display: none;
 }
-.page_item{
-  a{
-    text-decoration: none;
-  	-webkit-transition: .2s ease all;
-  	transition: .2s ease all;
-  	position: relative;
-    color: #000000;
-    &:hover{
-      color: $accentColor;
-      -webkit-transition: .2s ease all;
-      transition: .2s ease all;
-    }
-    &:focus{
-      color: $accentColor;
-      -webkit-transition: .2s ease all;
-      transition: .2s ease all;
-    }
-  }
-}
 .newsPosts{
   padding-left: 40px;
   a{

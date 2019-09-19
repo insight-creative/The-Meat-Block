@@ -213,6 +213,104 @@ add_filter('add_to_cart_custom_fragments', 'woocommerce_header_add_to_cart_custo
 	return $cart_fragments;
 }
 
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+require_once('inc/woocommerce.php');
+require_once('inc/woocommerce/insightcustom-woocommerce.php');
+require_once('inc/woocommerce/customize-breadcrumb.php');
+////////////////////////////////////////////////////////////////
+// Add custom quantity selector to our Woocommerce cart options
+///////////////////////////////////////////////////////////////
+add_action( 'wp_head' , 'custom_quantity_fields_css' );
+function custom_quantity_fields_css(){
+    ?>
+    <style>
+    .quantity input::-webkit-outer-spin-button,
+    .quantity input::-webkit-inner-spin-button {
+        display: none;
+        margin: 0;
+    }
+    .quantity input.qty {
+        appearance: textfield;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+    }
+    </style>
+    <?php
+}
+
+add_action( 'wp_footer' , 'custom_quantity_fields_script' );
+function custom_quantity_fields_script(){
+    ?>
+    <script type='text/javascript'>
+    jQuery( function( $ ) {
+        if ( ! String.prototype.getDecimals ) {
+            String.prototype.getDecimals = function() {
+                var num = this,
+                    match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+                if ( ! match ) {
+                    return 0;
+                }
+                return Math.max( 0, ( match[1] ? match[1].length : 0 ) - ( match[2] ? +match[2] : 0 ) );
+            }
+        }
+        // Quantity "plus" and "minus" buttons
+        $( document.body ).on( 'click', '.plus, .minus', function() {
+            var $qty        = $( this ).closest( '.quantity' ).find( '.qty'),
+                currentVal  = parseFloat( $qty.val() ),
+                max         = parseFloat( $qty.attr( 'max' ) ),
+                min         = parseFloat( $qty.attr( 'min' ) ),
+                step        = $qty.attr( 'step' );
+
+            // Format values
+            if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
+            if ( max === '' || max === 'NaN' ) max = '';
+            if ( min === '' || min === 'NaN' ) min = 0;
+            if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+
+            // Change the value
+            if ( $( this ).is( '.plus' ) ) {
+                if ( max && ( currentVal >= max ) ) {
+                    $qty.val( max );
+                } else {
+                    $qty.val( ( currentVal + parseFloat( step )).toFixed( step.getDecimals() ) );
+                }
+            } else {
+                if ( min && ( currentVal <= min ) ) {
+                    $qty.val( min );
+                } else if ( currentVal > 0 ) {
+                    $qty.val( ( currentVal - parseFloat( step )).toFixed( step.getDecimals() ) );
+                }
+            }
+
+            // Trigger change event
+            $qty.trigger( 'change' );
+        });
+    });
+    </script>
+    <?php
+}
+///////////////////////////////////////////////////////////////
+//// Add custom continue shopping cutton to cart page
+//////////////////////////////////////////////////////////////
+add_action( 'woocommerce_before_cart_collaterals', 'continue_shopping_button', 31 );
+
+function continue_shopping_button() {
+  if ( wp_get_referer() ) echo '<i class="fas fa-chevron-left"></i><a class="button continue" href="' . wp_get_referer() . '">Continue Shopping</a>';
+}
+// Set search results to display only 'product' post type results
+if ( !is_admin() ) {
+function searchfilter($query) {
+ if ($query->is_search && !is_admin() ) {
+ $query->set('post_type',array('product'));
+ }
+return $query;
+}
+add_filter('pre_get_posts','searchfilter');
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -224,6 +322,7 @@ function insightcustom_scripts() {
 	wp_enqueue_script( 'insightcustom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_register_style('font-awesome', get_stylesheet_directory_uri() . '/css/css/all.css');
+
 	wp_enqueue_style('font-awesome');
 
 	wp_enqueue_script('customJS', get_stylesheet_directory_uri() . '/js/customJS.js');
