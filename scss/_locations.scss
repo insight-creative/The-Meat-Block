@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------
+24.0 Locations
+--------------------------------------------------------------*/
+#asl-storelocator {
+  height: auto !important;
+}
+#asl-storelocator.container.no-pad.storelocator-main.asl-p-cont.asl-bg-0 {
+  max-width: 100% !important;
+}
+#asl-storelocator.asl-p-cont.asl-bg-0 .col-xs-12.search_filter p:last-child > span,
+ #asl-storelocator.asl-p-cont.asl-bg-0 .col-xs-12.search_filter .asl-store-search > span {
+  background: $brandColor;
+}
+#asl-storelocator.asl-p-cont.asl-bg-0 .Num_of_store {
+  background: $brandColor;
+}
+#asl-storelocator.asl-p-cont.asl-bg-0 #panel {
+  height: 50vh;
+  max-height: 435px;
+}
+.p-title {
+  font-family: $prometoMedium;
+	text-transform: uppercase;
+  font-weight: 700 !important;
+  font-size: .8em !important;
+  cursor: pointer;
+}
+#asl-storelocator.asl-p-cont .item .glyphicon {
+  margin-left: -25px !important;
+}
+.item p {
+  font-size: .8em !important;
+  a {
+    &:after {
+      width: 0;
+    }
+  }
+}
+.s-distance {
+  font-size: 14px !important;
+  &:after {
+    width: 0;
+  }
+}
+.asl-p-cont#asl-storelocator .s-direction {
+  font-size: 14px;
+}
+.cityTitle {
+  font-family: $prometoMedium;
+	text-transform: uppercase;
+  font-weight: 700;
+}
+.locationWrap {
+  background: $white;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.13);
+  border: 1px solid $lightGrey;
+  font-size: .8em;
+  margin: 0 0 20px 0;
+  @include breakpoint (laptopScreen) {
+    margin: 0 20px 20px 0;
+  }
+}
+.backToWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.callButton {
+  display:none;
+  @include breakpoint (laptopScreen) {
+    display: initial;
+  }
+}
+.locationContent {
+  padding: 0;
+  @include breakpoint (laptopScreen) {
+    padding-right: 20px;
+  }
+}
+.vehicleCol {
+  width: 100%;
+  @include breakpoint (tabletScreen) {
+    width: 45%;
+  }
+  @include breakpoint (largeScreen) {
+    width: 25%;
+  }
+}
+#transportBtn {
+  .redButton {
+    font-size: 14px !important;
+  }
+}

@@ -1,7 +1,7 @@
 <?php
 
 function woo_custom_breadrumb_home_url() {
-  return 'https://woocommerce-154794-989946.cloudwaysapps.com';
+  return 'https://woocommerce-154794-977005.cloudwaysapps.com';
 }
 add_filter('woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url');
 

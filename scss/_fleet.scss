@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+21.0 Fleet Page
+--------------------------------------------------------------*/
+.fleetTitleWrap {
+  background-color: $brandColor;
+  padding: 20px;
+  margin-top: 10px;
+  color: $white;
+}
+.fleetDescWrap {
+  background-color: $lightGrey;
+  padding: 0 20px 20px 20px;
+}
+.busSmallGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  img {
+    width: 95%;
+    height: 100%;
+    margin: 10px;
+    @include breakpoint (tabletScreen) {
+      width: 45%;
+    }
+    @include breakpoint (laptopScreen) {
+      width: 55%;
+    }
+    @include breakpoint (largeScreen) {
+      width: 45%;
+    }
+  }
+}
+.ctaWrapper {
+  height: 400px;
+  position: relative;
+}
+.ctaBody {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  z-index: 2;
+}
+.imageWrapper {
+  margin: 20px 20px 0 20px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: calc(100% - 10px);
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+}
+.linkWrapper {
+  &:hover {
+    .imageWrapper {
+      &:after {
+        background-color: rgba(0,0,0,0.6);
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+      }
+    }
+  }
+  &:focus {
+    .imageWrapper {
+      &:after {
+        background-color: rgba(0,0,0,0.6);
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+      }
+    }
+  }
+}
+.greyBorder {
+  border-bottom: 2px solid $lightGrey;
+}
+.greyBorderTop {
+  border-top: 2px solid $lightGrey;
+}
+.fleetWrapper {
+  img {
+    margin-top: 25px;
+    @include breakpoint (laptopScreen) {
+      margin-top: 0;
+    }
+  }
+}

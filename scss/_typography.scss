@@ -33,7 +33,7 @@ h2 {
 	}
 }
 h3 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 h4 {
 	font-size: 1.4em;
@@ -90,10 +90,6 @@ p {
 	@include breakpoint (largeMobileScreen) {
 		font-size: 3.6em;
 	}
-}
-.veltro {
-	font-family: $veltro;
-	font-size: 32px;
 }
 .centerText{
 	text-align: center;
