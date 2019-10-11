@@ -13,11 +13,14 @@
     <?php the_field('store_hours', 'option'); ?>
   </div>
   <div id="siteLogo">
-    <a href="https://woocommerce-154794-977005.cloudwaysapps.com/">
-      <?php
-        $image = get_field('store_logo', 'option');
-        $imageID = $image['ID'];
-        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+    <a href="<?=site_url()?>" id="siteLogo">
+      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+        if ( function_exists( 'the_custom_logo' ) ) {
+         the_custom_logo();
+        } else {
+            echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+        }
       ?>
     </a>
   </div>

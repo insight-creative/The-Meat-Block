@@ -38,7 +38,15 @@
 .cf-page-btn-next {
   float: right;
 }
+#formWrap {
+  @include breakpoint (laptopScreen) {
+    margin-bottom: 50px;
+  }
+}
 .formWrapper{
   padding: 20px;
   background-color: $lightGrey;
+}
+.smallMapWrapper {
+  padding: 40px 20px 20px 20px;
 }

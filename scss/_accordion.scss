@@ -2,14 +2,9 @@
 20.0 Accordion
 --------------------------------------------------------------*/
 .accordion {
-  background-color: $lightGrey;
-  max-width: 1050px;
-  margin: 50px auto;
-  border-top: 6px solid $brandColor;
   line-height: 1.6;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   &__item {
-    border-bottom: 1px solid $brandColor;
+    border-bottom: 1px solid #f6f6f6;
   }
 
   &__title {
@@ -24,21 +19,20 @@
       font-size: 20px;
       position: absolute;
       left: 15px;
-      top: 12px;
-      color: $brandColor;
+      top: 15px;
+      color: $accentColor;
     }
 
-    h5 {
-      border-bottom: 1px solid $lightGrey;
-      display:inline-block;
+    h6 {
+      display: inline-block;
+      font-size: .8em;
     }
 
     &:hover,
     &:focus {
       cursor: pointer;
       outline: none;
-      h5 {
-        border-bottom-color: $brandColor;
+      h6 {
         display:inline-block;
       }
     }

@@ -10,6 +10,9 @@ button {
 }
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
 	border-top-color: $accentColor !important;
+  &:before {
+    color: $accentColor !important;
+  }
 }
 .woocommerce-info::before {
 	color: $accentColor !important;

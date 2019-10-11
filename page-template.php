@@ -300,6 +300,83 @@ get_header();
 											echo '</div>';
 									endif;
 									echo '</section>';
+								elseif( get_row_layout() == 'three_column_block' ):
+									echo '<div class="pageWidth col-container">';
+										// vars
+										$col1 = get_sub_field('col1');
+										$col2 = get_sub_field('col2');
+										$col3 = get_sub_field('col3');
+
+										if( $col1['col_image_1'] ): ?>
+											<div class="col30 threeCol colLeft">
+												<a href="<?php echo $col1['col_link_1']; ?>">
+													<?php
+														if($col1['col_image_1']):
+															$Image = $col1['col_image_1'];
+															$imageID = $Image['ID'];
+															echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+														endif;
+													?>
+													<?php if ($col1['col1_heading']): ?>
+														<div class="blockTitleAlt">
+															<h6><?php echo $col1['col1_heading']; ?></h6>
+														</div>
+													<?php endif; ?>
+													<div class="blockOverlay">
+														<div class="blockBorder">
+															<h6>View More</h6>
+														</div>
+													</div>
+												</a>
+											</div>
+										<?php endif;
+										if( $col2['col_image_2'] ): ?>
+											<div class="col30 threeCol colMiddle">
+												<a href="<?php echo $col2['col_link_2']; ?>">
+													<?php
+														if($col2['col_image_2']):
+															$Image = $col2['col_image_2'];
+															$imageID = $Image['ID'];
+															echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+														endif;
+													?>
+													<?php if ($col2['col2_heading']): ?>
+														<div class="blockTitleAlt">
+															<h6><?php echo $col2['col2_heading']; ?></h6>
+														</div>
+													<?php endif; ?>
+													<div class="blockOverlay">
+														<div class="blockBorder">
+															<h6>View More</h6>
+														</div>
+													</div>
+												</a>
+											</div>
+										<?php endif;
+										if( $col3['col_image_3'] ): ?>
+											<div class="col30 threeCol colRight">
+												<a href="<?php echo $col3['col_link_3']; ?>">
+													<?php
+														if($col3['col_image_3']):
+															$Image = $col3['col_image_3'];
+															$imageID = $Image['ID'];
+															echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+														endif;
+													?>
+													<?php if ($col3['col3_heading']): ?>
+														<div class="blockTitleAlt">
+															<h6><?php echo $col3['col3_heading']; ?></h6>
+														</div>
+													<?php endif; ?>
+													<div class="blockOverlay">
+														<div class="blockBorder">
+															<h6>View More</h6>
+														</div>
+													</div>
+												</a>
+											</div>
+										<?php endif;
+									echo '</div>';
 								elseif( get_row_layout() == 'full_width_featured_products_section' ):
 									echo '<section id="' . get_sub_field('section_id') . '" class="paddedSection">';
 									if( have_rows('featured_product_columns') ):

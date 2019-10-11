@@ -43,13 +43,16 @@
 }
 #copyright{
 	color: $white;
-	font-size: 14px;
+	font-size: 12px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	@include breakpoint (tabletScreen) {
+		font-size: 14px;
+	}
 		p{
 			margin-top: 0;
 			margin-bottom: 0 !important;
@@ -129,7 +132,7 @@
 	background-color: $black;
 	padding: 20px;
 }
-#brandLogos {
+.brandLogos {
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;

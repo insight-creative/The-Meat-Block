@@ -8,7 +8,7 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-		<section id ="contactContent">
+		<section id ="contactContent" class="paddedSection">
 			<div id="contactWrap">
 				<div class="pageWidth flex-container">
 					<div id="formWrap" class="col60">

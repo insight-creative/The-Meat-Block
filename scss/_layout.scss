@@ -63,7 +63,7 @@
 	height: 100%;
 	margin: 0 auto;
 		@include breakpoint(largeScreen){
-	    width: 60%;
+	    width: 70%;
 	  }
 	}
 .fullWidth{
@@ -295,7 +295,7 @@
 .site-content{
 	margin-top: 10px;
 	@include breakpoint (laptopScreen) {
-		margin-top: 100px;
+		margin-top: 150px;
 	}
 }
 .marginTop{

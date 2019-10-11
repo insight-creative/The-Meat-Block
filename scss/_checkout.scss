@@ -2,6 +2,52 @@
   h3 {
     background-color: $lightGrey;
     padding: 10px;
+    font-size: 1.2em;
+  }
+  .button {
+    background-color: $trueBlack !important;
+  	color: $white !important;
+  	transition: .2s ease;
+    text-transform: uppercase;
+  	&:hover {
+  		background-color: $charcoal !important;
+      color: $white !important;
+  		transition: .2s ease;
+  	}
+  }
+  .checkout_coupon {
+    border: 2px dashed $lightGrey !important;
+    p:first-of-type {
+      display: none;
+    }
+    input[type=text] {
+      height: 40px;
+      @include breakpoint (largeMobileScreen) {
+        height: 45px;
+      }
+    }
+  }
+  input, textarea {
+    border-radius: 5px;
+    border: 1px solid $darkGrey;
+    padding: 5px;
+  }
+  p {
+    margin-bottom: 0 !important;
+  }
+  .woocommerce-checkout-payment {
+    background-color: $lightGrey !important;
+    .payment_box {
+      background-color: $white !important;
+      border-radius: 5px !important;
+      &:before {
+        display: none !important;
+      }
+      .form-row {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
   }
 }
 .checkout-button {
