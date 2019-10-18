@@ -1,0 +1,74 @@
+.sidebarMenu {
+  display: none;
+  margin: 50px 25px 75px 0;
+  background-color: $lightGrey;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  @include breakpoint (laptopScreen) {
+    display: block;
+  }
+  h3 {
+    background-color: $trueBlack;
+    color: $white;
+    margin-bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    a{
+      color: $accentColor;
+      transition: .2s ease;
+      &:hover {
+        color: $black;
+        transition: .2s ease;
+      }
+    }
+  }
+  li:last-of-type {
+    border-bottom: none;
+  }
+}
+.parent-pageid-625 {
+  #services {
+    display: none;
+  }
+}
+.parent-pageid-655 {
+  #foods {
+    display: none;
+  }
+  #sauces {
+    display: none;
+  }
+}
+.smallGrillCTA {
+  margin: 50px 0 0 20px;
+  background-color: $lightGrey;
+  padding: 10px;
+  border-radius: 5px;
+  h6 {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  img {
+    width: 25%;
+  }
+}
+#sauces {
+  margin: 20px 0 0 20px;
+  img {
+    width: 10%;
+  }
+}
+#fullWidthCTA {
+  background-image: url('/wp-content/uploads/2019/09/wood-grain-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ctaContent {
+  padding: 100px 0;
+}

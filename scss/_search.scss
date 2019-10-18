@@ -78,11 +78,36 @@
     padding: 10px;
   }
 }
+.fa-search {
+  opacity: 1;
+  transition: opacity .3s;
+}
+.fa-times {
+  opacity: 0;
+  transition: opacity .3s;
+}
 .searchOpen {
   display: block !important;
 }
+.iconOpacity {
+  .fa-times {
+    opacity: 1;
+    transition: opacity .3s;
+  }
+  .fa-search {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+}
 #search {
   padding: 0 10px;
+  position: relative;
+  height: 100%;
+  i {
+    position: absolute;
+    top: 15%;
+    left: 0;
+  }
 }
 #mobileSearch {
   @include breakpoint (laptopScreen) {

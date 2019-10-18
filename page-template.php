@@ -1,8 +1,6 @@
 <?php
 /**
  * Template Name: Universal Template
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package InsightCustom
  */
 

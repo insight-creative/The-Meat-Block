@@ -24,8 +24,15 @@ $(function() {
 });
 // Toggle search
 $(function() {
-    $("#searchWrap").click(function(e){
+    $("#search").click(function(e){
         $("#searchFormWrap").toggleClass("searchOpen");
+        	e.stopPropagation();
+    });
+});
+// Toggle search icon
+$(function() {
+    $("#search").click(function(e){
+        $("#search").toggleClass("iconOpacity");
         	e.stopPropagation();
     });
 });

@@ -47,6 +47,8 @@ if ( ! function_exists( 'insightcustom_setup' ) ) :
 			'main-menu' => esc_html__( 'main-menu', 'insightCustom' ),
 			'SecondaryMenu' => esc_html__( 'SecondaryMenu', 'insightCustom' ),
 			'FooterMenu' => esc_html__( 'FooterMenu', 'insightCustom' ),
+			'FoodMenu' => esc_html__( 'FoodMenu', 'insightCustom' ),
+			'ServicesMenu' => esc_html__( 'ServicesMenu', 'insightCustom' ),
 		) );
 
 		/*
@@ -141,30 +143,22 @@ function insightcustom_fonts_url() {
 	* into your own language.
 	*/
  $Roboto = _x( 'on', 'Roboto font: on or off', 'insightcustom' );
-
  $font_families = array();
-
  if ( 'off' !== $Roboto ) {
 	 $font_families[] = 'Roboto:400,500,700,900';
  }
-
  if ( in_array( 'on', array($Roboto) ) ) {
-
 	 $query_args = array(
 		 'family' => urlencode( implode( '|', $font_families ) ),
 		 'subset' => urlencode( 'latin,latin-ext' ),
 	 );
-
 	 $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
  }
-
  return esc_url_raw( $fonts_url );
 }
 
 /**
  * Add preconnect for Google Fonts.
- *
- * @since Twenty Seventeen 1.0
  *
  * @param array  $urls           URLs to print for resource hints.
  * @param string $relation_type  The relation type the URLs are printed.
@@ -189,16 +183,16 @@ if( function_exists('acf_add_options_page') ) {
 }
 // Set fields to collapsed for a condensed view for new users
 function my_acf_admin_head() {
-    ?>
-    <script type="text/javascript">
-        (function($){
-            $(document).ready(function(){
-                $('.layout').addClass('-collapsed');
-                $('.acf-postbox').addClass('closed');
-            });
-        })(jQuery);
-    </script>
-    <?php
+?>
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function(){
+            $('.layout').addClass('-collapsed');
+            $('.acf-postbox').addClass('closed');
+        });
+    })(jQuery);
+</script>
+<?php
 }
 add_action('acf/input/admin_head', 'my_acf_admin_head');
 
@@ -316,28 +310,20 @@ add_filter('pre_get_posts','searchfilter');
  */
 function insightcustom_scripts() {
 	wp_enqueue_style( 'insightcustom-style', get_stylesheet_uri() );
-
 	wp_enqueue_script( 'insightcustom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'insightcustom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	wp_register_style('font-awesome', get_stylesheet_directory_uri() . '/css/css/all.css');
-
 	wp_enqueue_style('font-awesome');
-
 	wp_enqueue_script('customJS', get_stylesheet_directory_uri() . '/js/customJS.js');
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'insightcustom_scripts' );
-
 /**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */

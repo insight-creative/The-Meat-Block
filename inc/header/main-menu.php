@@ -15,6 +15,7 @@
       <div id="searchWrap">
         <button id="search">
           <i class="fas fa-search"></i>
+          <i class="fas fa-times"></i>
         </button>
       </div>
       <div id="mobileSearch">

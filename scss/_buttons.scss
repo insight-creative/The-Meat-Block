@@ -41,7 +41,7 @@ a,a:visited,a:hover,a:active{
 	z-index:1;
   font-family: $roboto !important;
 	font-weight: 700 !important;
-  font-size: 16px !important;
+  font-size: 20px !important;
   text-transform: uppercase;
   text-decoration: none;
 	border: 2px solid $accentColor;
@@ -56,11 +56,11 @@ a,a:visited,a:hover,a:active{
 		width: 0;
 	}
     &:hover{
-      background: $transparent;
+      background: $accentColorDark;
+			border: 2px solid $accentColorDark;
 			box-shadow: 0 6px 18px 0 rgba(0,0,0,.5);
     	-webkit-transition: .3s ease;
     	transition: .3s ease;
-			color: $accentColor !important;
     }
 }
 .primaryButtonAlt{

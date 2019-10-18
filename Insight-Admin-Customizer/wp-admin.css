@@ -1,0 +1,23 @@
+#wpfooter {
+  background-color: #d31b45 !important;
+  color: #ffffff !important;
+}
+#wpfooter a {
+  color: #f6f6f6 !important;
+}
+#wpfooter a:hover {
+  color: #bbbbbb !important;
+}
+#menu-comments, #menu-tools, #wp-admin-bar-updates, #wp-admin-bar-comments, #wp-admin-bar-new-content,
+#toplevel_page_fusion-builder-options, #menu-posts-slide, #menu-posts, #menu-posts-avada_portfolio,
+#menu-posts-avada_faq, #menu-posts-themefusion_elastic, #menu-appearance, #menu-settings,
+#toplevel_page_sucuriscan {
+  display: none;
+}
+#menu-appearance li:last-of-type, #menu-plugins li:last-of-type, #menu-dashboard li:last-of-type{
+  display: none;
+}
+#welcome p, #welcome li {
+  max-width: 800px;
+  font-size: 18px !important;
+}

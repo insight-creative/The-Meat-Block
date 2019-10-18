@@ -475,7 +475,8 @@ Font Variables
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  justify-content: center; }
   @media (min-width: 768px) {
     .col-container {
       -webkit-box-orient: horizontal;
@@ -1544,7 +1545,7 @@ a, a:visited, a:hover, a:active {
   z-index: 1;
   font-family: "Roboto", "Lucida Grande", "Lucida Sans", Geneva, Arial, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 16px !important;
+  font-size: 20px !important;
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid #b6ae8c;
@@ -1558,11 +1559,11 @@ a, a:visited, a:hover, a:active {
   .primaryButton:after {
     width: 0; }
   .primaryButton:hover {
-    background: rgba(0, 0, 0, 0);
+    background: #a2986c;
+    border: 2px solid #a2986c;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.5);
     -webkit-transition: .3s ease;
-    transition: .3s ease;
-    color: #b6ae8c !important; }
+    transition: .3s ease; }
 
 .primaryButtonAlt {
   position: relative;
@@ -2521,11 +2522,32 @@ ul {
     width: 20%;
     padding: 10px; }
 
+.fa-search {
+  opacity: 1;
+  transition: opacity .3s; }
+
+.fa-times {
+  opacity: 0;
+  transition: opacity .3s; }
+
 .searchOpen {
   display: block !important; }
 
+.iconOpacity .fa-times {
+  opacity: 1;
+  transition: opacity .3s; }
+.iconOpacity .fa-search {
+  opacity: 0;
+  transition: opacity .3s; }
+
 #search {
-  padding: 0 10px; }
+  padding: 0 10px;
+  position: relative;
+  height: 100%; }
+  #search i {
+    position: absolute;
+    top: 15%;
+    left: 0; }
 
 @media (min-width: 992px) {
   #mobileSearch {
@@ -3092,5 +3114,66 @@ button {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.sidebarMenu {
+  display: none;
+  margin: 50px 25px 75px 0;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+  @media (min-width: 992px) {
+    .sidebarMenu {
+      display: block; } }
+  .sidebarMenu h3 {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .sidebarMenu li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px; }
+    .sidebarMenu li a {
+      color: #b6ae8c;
+      transition: .2s ease; }
+      .sidebarMenu li a:hover {
+        color: #303030;
+        transition: .2s ease; }
+  .sidebarMenu li:last-of-type {
+    border-bottom: none; }
+
+.parent-pageid-625 #services {
+  display: none; }
+
+.parent-pageid-655 #foods {
+  display: none; }
+.parent-pageid-655 #sauces {
+  display: none; }
+
+.smallGrillCTA {
+  margin: 50px 0 0 20px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px; }
+  .smallGrillCTA h6 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .smallGrillCTA img {
+    width: 25%; }
+
+#sauces {
+  margin: 20px 0 0 20px; }
+  #sauces img {
+    width: 10%; }
+
+#fullWidthCTA {
+  background-image: url("/wp-content/uploads/2019/09/wood-grain-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#ctaContent {
+  padding: 100px 0; }
 
 /*# sourceMappingURL=style.css.map */
