@@ -62,8 +62,9 @@ get_header();
 					      ?>
 						</div>
 					</div>
+					<?php get_template_part('/inc/sidebar/smallCTA'); ?>
 				</div>
-				<div class="col50">
+				<div class="col80">
 					<?php
 					// check if the flexible content field has rows of data
 					if( have_rows('content_fields') ):
@@ -453,23 +454,6 @@ get_header();
 							// no layouts found
 					endif;
 					?>
-				</div>
-				<div class="col20">
-					<div id="grilling" class="smallGrillCTA">
-						<div class="centerText">
-							<img src="/wp-content/uploads/2019/09/Little_Grill-1.png" class="image">
-							<h6>Looking for Grilling Products?</h6>
-						</div>
-						<a href="/shop/">Visit our online store</a>
-						<a href="/contact/">Contact us</a>
-					</div>
-					<div id="sauces" class="smallGrillCTA">
-						<div class="centerText">
-							<img src="/wp-content/uploads/2019/09/Little_Spice_Bottle-1.png" class="image">
-							<h6>Looking for sauces or rubs?</h6>
-						</div>
-						<a href="/product-category/sauces-rubs-and-more/">Shop sauces</a>
-					</div>
 				</div>
 			</div>
 		</section>

@@ -137,19 +137,42 @@ get_header();
 											$brndLogoLeft = get_sub_field('brand_logo_left');
 											$brndLogoRight = get_sub_field('brand_logo_right');
 											if( $col1 ): ?>
-												<div class="col50 twoCol colLeft colLogo" style="background-image: url(<?php echo $col1['background_image']; ?>)">
-													<?php echo $col1['section_heading']; ?>
+												<div class="col50 twoCol colLeft colLogo">
+													<a href="<?php echo $col1['col_link_1']; ?>">
+													<?php
+														if($col1['col_image_1']):
+															$Image = $col1['col_image_1'];
+															$imageID = $Image['ID'];
+															echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+														endif;
+													?>
+													<div class="featuredHeading">
+														<?php echo $col1['section_heading']; ?>
+													</div>
 													<div class="centerText">
 														<?php
 														$imageID = $col1['brand_logo_left']['ID'];
 														echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
 														?>
 													</div>
+													<div class="centerText">
+														<a href="<?php echo $col1['col_link_1']; ?>" class="primaryButton">View Bi-Weekly Specials</a>
+													</div>
+													</a>
 												</div>
 											<?php endif;
 											if( $col2 ): ?>
-												<div class="col50 twoCol colRight colLogo" style="background-image: url(<?php echo $col2['background_image_right']; ?>)">
-													<?php echo $col2['section_heading_right']; ?>
+												<div class="col50 twoCol colRight colLogo">
+													<?php
+														if($col2['col_image_2']):
+															$Image = $col2['col_image_2'];
+															$imageID = $Image['ID'];
+															echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
+														endif;
+													?>
+													<div class="featuredHeading">
+														<?php echo $col2['section_heading_right']; ?>
+													</div>
 													<div class="centerText">
 														<?php
 														$imageID = $col2['brand_logo_right']['ID'];

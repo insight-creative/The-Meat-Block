@@ -1,15 +1,10 @@
 <?php
 /**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
  * @package InsightCustom
  */
 
 get_header();
 ?>
-<?php get_template_part('/inc/breadcrumbs'); ?>
 	<div class="pageWidth paddedSection">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
@@ -29,7 +24,5 @@ get_header();
 			<?php the_post_navigation(); ?>
 		</div>
 	</div>
-
 <?php
-get_sidebar();
 get_footer();

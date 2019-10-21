@@ -81,7 +81,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 100px 0;
+	padding: 150px 0;
 }
 .blockText{
 	display: -webkit-box;
@@ -140,6 +140,22 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
+    }
+}
+.flex-container-wrapped{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+    @include breakpoint(laptopScreen){
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+			flex-wrap: wrap;
     }
 }
 .col-container{
@@ -333,13 +349,34 @@
 	margin-bottom: 15px;
 }
 .twoCol {
-	height: 300px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	h6 {
-		padding: 20px;
-		font-size: 1.6em;
+	position: relative;
+	box-shadow: 0 6px 18px 0 rgba(0,0,0,.5);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	max-height: 290px;
+	overflow: hidden;
+	.featuredHeading {
+		padding: 20px 20px 20px 40px;
+		position: absolute;
+		top: 0;
+		h6 {
+			font-size: 1.6em;
+			margin-bottom: 0;
+			color: $trueBlack;
+			transition: .3s ease;
+		}
+	}
+	.centerText:last-of-type {
+		position: absolute;
+		bottom: 50px;
+	}
+	a {
+		&:hover {
+			h6 {
+				color: $accentColor;
+				transition: .3s ease;
+			}
+		}
 	}
 }
 .threeCol {
@@ -372,7 +409,8 @@
 		margin-bottom: 0;
 	}
 	.image {
-		width: 40%;
+		width: 100%;
+		position: relative;
 	}
 }
 .colMiddle {
@@ -388,7 +426,8 @@
 		margin-top: 0;
 	}
 	.image {
-		width: 40%;
+		width: 100%;
+		position: relative;
 	}
 }
 .colLogo {
