@@ -88,6 +88,33 @@ a,a:visited,a:hover,a:active{
 			color: $white;
     }
 }
+.primaryButtonBlack{
+	position: relative;
+	z-index:1;
+  font-family: $roboto !important;
+	font-weight: 700 !important;
+  font-size: 20px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+	border: 2px solid $trueBlack;
+	background: $trueBlack;
+	padding: 5px 25px 5px 25px;
+	color: $white !important;
+	-webkit-transition: .3s ease !important;
+	transition: .3s ease !important;
+	cursor: pointer;
+  white-space: nowrap;
+	&:after {
+		width: 0;
+	}
+    &:hover{
+      background: $accentColorDark;
+			border: 2px solid $accentColorDark;
+			box-shadow: 0 6px 18px 0 rgba(0,0,0,.5);
+    	-webkit-transition: .3s ease;
+    	transition: .3s ease;
+    }
+}
 .buttonWrapper {
 	a {
 		&:before {

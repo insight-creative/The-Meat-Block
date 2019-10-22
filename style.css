@@ -1536,6 +1536,10 @@ p {
 .accentText {
   color: #b6ae8c; }
 
+.veltro {
+  font-family: Veltro-Reg;
+  font-size: 30px; }
+
 /*--------------------------------------------------------------
 8.0 Buttons
 --------------------------------------------------------------*/
@@ -1620,6 +1624,31 @@ a, a:visited, a:hover, a:active {
     -webkit-transition: .3s ease;
     transition: .3s ease;
     color: #FFFFFF; }
+
+.primaryButtonBlack {
+  position: relative;
+  z-index: 1;
+  font-family: "Roboto", "Lucida Grande", "Lucida Sans", Geneva, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000;
+  background: #000000;
+  padding: 5px 25px 5px 25px;
+  color: #FFFFFF !important;
+  -webkit-transition: .3s ease !important;
+  transition: .3s ease !important;
+  cursor: pointer;
+  white-space: nowrap; }
+  .primaryButtonBlack:after {
+    width: 0; }
+  .primaryButtonBlack:hover {
+    background: #a2986c;
+    border: 2px solid #a2986c;
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
 
 .buttonWrapper a:before {
   width: 0%; }
@@ -2148,6 +2177,9 @@ sup {
 --------------------------------------------------------------*/
 .page-template h1 {
   padding: 50px 0; }
+
+.universal-content-area .brandLogos {
+  justify-content: center; }
 
 /*--------------------------------------------------------------
 15.0 Sitemap
@@ -2945,7 +2977,7 @@ sup {
   float: none;
   margin: 0;
   display: inline-block;
-  width: 150px; }
+  width: 175px; }
 
 .plus, .minus {
   background-color: #b6ae8c;
