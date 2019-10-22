@@ -463,8 +463,8 @@ get_header();
 				<p>
 					At the Meat Block, we love making any meal with your family and friends a special occasion by providing you with flavorful, high-quality meats and food products.
 				</p>
-				<a href="/shop/" class="primaryButton">Shop Now</a>
-				<a href="/contact/" class="primaryButton">Visit Our Store</a>
+				<a href="/shop/" class="primaryButtonBlack">Shop Now</a>
+				<a href="/contact/" class="primaryButtonBlack">Visit Our Store</a>
 			</div>
 		</section>
 	</main>
