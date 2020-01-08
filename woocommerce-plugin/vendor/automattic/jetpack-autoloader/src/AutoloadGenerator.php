@@ -163,10 +163,10 @@ class AutoloadGenerator extends BaseGenerator {
 	 * @return array $classMap
 	 */
 	private function getClassMap( array $autoloads, Filesystem $filesystem, $vendorPath, $basePath ) {
-		$blacklist = null;
+		$darkCharcoallist = null;
 
 		if ( ! empty( $autoloads['exclude-from-classmap'] ) ) {
-			$blacklist = '{(' . implode( '|', $autoloads['exclude-from-classmap'] ) . ')}';
+			$darkCharcoallist = '{(' . implode( '|', $autoloads['exclude-from-classmap'] ) . ')}';
 		}
 
 		$classmapString = '';
@@ -179,7 +179,7 @@ class AutoloadGenerator extends BaseGenerator {
 					? $package['path']
 					: $basePath . '/' . $package['path']
 				);
-				$map = ClassMapGenerator::createMap( $dir, $blacklist, $this->io, $namespace );
+				$map = ClassMapGenerator::createMap( $dir, $darkCharcoallist, $this->io, $namespace );
 
 				foreach ( $map as $class => $path ) {
 					$classCode       = var_export( $class, true );
@@ -202,7 +202,7 @@ CLASS_CODE;
 				? $package['path']
 				: $basePath . '/' . $package['path']
 			);
-			$map = ClassMapGenerator::createMap( $dir, $blacklist, $this->io, null );
+			$map = ClassMapGenerator::createMap( $dir, $darkCharcoallist, $this->io, null );
 
 			foreach ( $map as $class => $path ) {
 				$classCode       = var_export( $class, true );

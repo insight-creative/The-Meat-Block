@@ -7,7 +7,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: $trueBlack;
+	color: $black;
 	font-family: $roboto;
 	font-size: 18px;
 	line-height: 1.4em;
@@ -52,12 +52,12 @@ p {
 	color: $white;
 }
 .whiteGlow {
-	color: $trueBlack;
+	color: $black;
 	text-shadow: 5px 5px 10px $white;
 }
 .blackShadow {
 	color: $white;
-	text-shadow: 0 0 20px $trueBlack;
+	text-shadow: 0 0 20px $black;
 }
 .headlineText {
 	color: #000000;

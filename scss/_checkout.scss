@@ -5,7 +5,7 @@
     font-size: 1.2em;
   }
   .button {
-    background-color: $trueBlack !important;
+    background-color: $black !important;
   	color: $white !important;
   	transition: .2s ease;
     text-transform: uppercase;
@@ -29,8 +29,12 @@
   }
   input, textarea {
     border-radius: 5px;
-    border: 1px solid $darkGrey;
-    padding: 5px;
+    border: 1px solid $darkGrey !important;
+    padding: 5px !important;
+  }
+  .select2-selection {
+    border-radius: 5px;
+    border: 1px solid $darkGrey !important;
   }
   p {
     margin-bottom: 0 !important;
@@ -51,7 +55,7 @@
   }
 }
 .checkout-button {
-	background-color: $trueBlack !important;
+	background-color: $black !important;
 	color: $white;
 	transition: .2s ease;
   text-transform: uppercase;

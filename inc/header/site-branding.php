@@ -10,7 +10,10 @@
     </button>
   </div>
   <div id="hours">
-    <?php the_field('store_hours', 'option'); ?>
+    <p>
+      <strong>Hours:</strong> Monday - Friday 9:00 a.m. to 6:00 p.m.<br>
+      Saturdays 9:00 a.m. to 5:00 p.m.
+    </p>
   </div>
   <div id="siteLogo">
     <a href="<?=site_url()?>" id="siteLogo">

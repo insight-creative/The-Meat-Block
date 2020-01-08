@@ -1,34 +1,45 @@
 .page-template {
-  .col-container:first-of-type {
-    padding-top: 50px;
+  .servicesContainer {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
   }
-  .col30 {
-    &:hover {
-      .blockOverlay {
-        opacity: 1;
-        transition: .3s ease;
-      }
+  .serviceCol {
+  	position: relative;
+  	width: 100%;
+  	height:	auto;
+  	@include breakpoint (largeMobileScreen) {
+  		width: 45%;
+  		margin: 10px;
+  	}
+  	@include breakpoint (largeScreen) {
+  		width: 23%;
+  	}
+  	&:hover {
+  		.blockOverlay {
+  			opacity: 1;
+  			transition: .3s ease;
+  		}
+  	}
+    a {
+      position: initial;
     }
-  }
-  .threeCol {
-  	height: auto;
-    .blockTitleAlt {
-      position: absolute;
-      bottom: 8px;
-      height: auto;
-      background-color: rgba(0,0,0,.6);
-    	color: $white;
-    	width: 100%;
-    	transition: .2s ease;
-    	h6 {
-    		color: $white;
-    		text-transform: uppercase;
-    		font-size: 1.4em;
-    		line-height: 1em;
-    		margin-bottom: 0;
-        padding: 10px;
-    	}
-    }
+  	.blockTitleAlt {
+  		position: absolute;
+  		bottom: 7px;
+  		height: auto;
+  		background-color: rgba(0,0,0,.6);
+  		color: $white;
+  		width: 100%;
+  		transition: .2s ease;
+  		h6 {
+  			color: $white;
+  			text-transform: uppercase;
+  			font-size: .8em;
+  			margin-bottom: 0;
+  			padding: 10px;
+  		}
+  	}
   }
   .colLeft {
     position: relative;
@@ -48,33 +59,28 @@
   		width: 100%;
   	}
   }
-}
-.page-id-655 {
-  .col-container:last-of-type {
-    padding-bottom: 50px;
+  .blockOverlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 8px);
+    width: 100%;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    h6 {
+      color: $accentColor;
+    }
   }
-}
-.blockOverlay {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 8px);
-  width: 100%;
-  background-color: $trueBlack;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .3s ease;
-  h6 {
-    color: $accentColor;
+  .blockBorder {
+    border: 2px solid $accentColor;
+    width: 85%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
-.blockBorder {
-  border: 2px solid $accentColor;
-  width: 85%;
-  height: 85%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

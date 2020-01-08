@@ -10,7 +10,6 @@
             'items_wrap' 				=> '%3$s'
         ) );
         //add search form search-toggle
-        //echo '<li id="site-search" class="search-toggle">' . get_search_form( false ) . '</li>';
       ?>
       <div id="searchWrap">
         <button id="search">

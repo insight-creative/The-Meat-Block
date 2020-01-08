@@ -3,9 +3,7 @@
  * @package InsightCustom
  */
 get_header();
-
 ?>
-
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id ="contactContent" class="paddedSection">
@@ -34,11 +32,7 @@ get_header();
 								<br>
 								Email: info@themeatblock.com
 							</p>
-							<p>Normal store hours:<br>
-							Monday – Friday<br>
-							9:00 am – 6:00 pm<br>
-							Saturdays<br>
-							9:00 am – 5:00 pm</p>
+							<?php the_field('store_hours', 'option'); ?>
 						</div>
 					</div>
 				</div>

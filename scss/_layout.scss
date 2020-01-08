@@ -94,7 +94,6 @@
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	max-width: 800px;
   margin: 0 auto;
 	padding: 0;
     @include breakpoint(laptopScreen){
@@ -262,7 +261,7 @@
 	background: $lightGrey;
 }
 .blackBack {
-	background-color: $trueBlack;
+	background-color: $black;
 	padding: 10px 20px;
 }
 .page-content{
@@ -275,6 +274,18 @@
 	padding: 25px 0;
 	@include breakpoint (tabletScreen) {
 		padding: 50px 0;
+	}
+}
+.paddedTop {
+	padding-top: 25px;
+	@include breakpoint (tabletScreen) {
+		padding-top: 50px;
+	}
+}
+.paddedBottom {
+	padding-bottom: 25px;
+	@include breakpoint (tabletScreen) {
+		padding-bottom: 50px;
 	}
 }
 .smallPaddedSection{
@@ -290,7 +301,8 @@
 	padding: 2em 0;
 }
 .limitWidth{
-  max-width: 1050px;
+  max-width: 800px;
+	margin: 0 auto;
 }
 .limitPortfolioWidth{
 	max-width: 1350px;
@@ -362,7 +374,7 @@
 		h6 {
 			font-size: 1.6em;
 			margin-bottom: 0;
-			color: $trueBlack;
+			color: $black;
 			transition: .3s ease;
 		}
 	}

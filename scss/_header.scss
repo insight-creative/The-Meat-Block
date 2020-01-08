@@ -35,7 +35,7 @@
 	}
 }
 #mastheadContainer {
-	background: $trueBlack;
+	background: $black;
 }
 #mastheadInner {
 	display: -webkit-box;
@@ -53,7 +53,7 @@
 	background: $white;
 	#searchWrap {
 		#search {
-			color: $trueBlack;
+			color: $black;
 		}
 	}
 }
@@ -137,7 +137,7 @@
 		font-family: $roboto;
 		font-size: 18px;
 		font-weight: 700;
-		color: $black !important;
+		color: $darkCharcoal !important;
 		padding: 10px;
 		@include breakpoint (laptopScreen) {
 				font-size: 12px;
@@ -157,14 +157,14 @@
 }
 .hasMegaMenu {
 	position: static;
-	background-color: $trueBlack;
+	background-color: $black;
 	@include breakpoint (laptopScreen) {
 		background-color: $white;
 	}
 	a {
 		color: $white !important;
 		@include breakpoint (laptopScreen) {
-			color: $black !important;
+			color: $darkCharcoal !important;
 		}
 	}
 	&:hover {
@@ -199,7 +199,7 @@
 	a {
 		font-weight: 700;
 		font-size: 16px;
-		color: $black !important;
+		color: $darkCharcoal !important;
 	}
 	.sub-menu {
 		display: flex;
@@ -213,7 +213,7 @@
 			a {
 				font-weight: 400;
 				font-size: 14px;
-				color: $black !important;
+				color: $darkCharcoal !important;
 			}
 		}
 	}
@@ -288,7 +288,7 @@
 	}
 }
 .mobileMenuItem {
-	background: $black;
+	background: $darkCharcoal;
 	line-height: 1;
 	@include breakpoint (laptopScreen) {
 		display: none;
@@ -327,7 +327,7 @@
 	color: $accentColor !important;
 	transition: .3s ease;
 	&:hover {
-		color: $trueBlack !important;
+		color: $black !important;
 		transition: .3s ease;
 	}
 }
@@ -402,7 +402,7 @@ nav{
 	font-size: 26px;
 	font-weight: 700;
 	padding-right: 5px;
-	color: $black;
+	color: $darkCharcoal;
 	text-decoration: none;
 	-webkit-transition: .3s ease-out all;
 	transition: .3s ease-out all;

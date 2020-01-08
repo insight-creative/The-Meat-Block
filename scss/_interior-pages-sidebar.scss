@@ -8,7 +8,7 @@
     display: block;
   }
   h3 {
-    background-color: $trueBlack;
+    background-color: $black;
     color: $white;
     margin-bottom: 0;
     padding: 10px;
@@ -23,7 +23,7 @@
       color: $accentColor;
       transition: .2s ease;
       &:hover {
-        color: $black;
+        color: $darkCharcoal;
         transition: .2s ease;
       }
     }

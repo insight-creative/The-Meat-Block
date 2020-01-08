@@ -103,37 +103,26 @@ defined( 'ABSPATH' ) || exit;
 
 	</table>
 	<h2>Have a Question?</h2>
-	<div class="checkoutFAQWrapper">
+	<div class="checkoutFAQ">
 		<div class="checkoutFAQInner">
-			<!-- Accordion -->
-			<section id="accordion">
-			  <div class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
-			    <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
-			      <span id="tab1" tabindex="0" class="accordion__title" aria-controls="panel1" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
-			        <h6 class="noMargin">What forms of payment do you accept?</h6>
-			      </span>
-			      <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab1" data-binding="expand-accordion-container">
-			        <div class="accordion__content-inner">
-			          The Meat Block accepts US-issued major credit cards and PayPal
-			        </div>
-			      </div>
-			    </article>
-			  </div>
-				<div class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
-			    <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
-			      <span id="tab1" tabindex="0" class="accordion__title" aria-controls="panel1" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
-			        <h6 class="noMargin">When will my order by shipped?</h6>
-			      </span>
-			      <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab1" data-binding="expand-accordion-container">
-			        <div class="accordion__content-inner">
-			          Orders placed by 3pm CST Monday-Friday ship the same day pending credit card verification (in-stock merchandise only). Orders requiring additional review may take 1-2 business days to process.
-			        </div>
-			      </div>
-			    </article>
-			  </div>
-			</section>
-			<div class="phone">
-				<i class="fas fa-phone-alt"></i><a href="tel:920-757-6622">920-757-6622</a>
+			<div id="accordion">
+				<details>
+					<summary class="accordion_item">
+						<i class="fas fa-plus"></i>
+						<i class="fas fa-minus"></i>
+						<h6 class="noMargin">What forms of payment do you accept?</h6></summary>
+					<p>The Meat Block accepts US-issued major credit cards and PayPal</p>
+				</details>
+				<details>
+					<summary class="accordion_item">
+						<i class="fas fa-plus"></i>
+						<i class="fas fa-minus"></i>
+						<h6 class="noMargin">When will my order by shipped?</h6></summary>
+					<p>Orders placed by 3pm CST Monday-Friday ship the same day pending credit card verification (in-stock merchandise only). Orders requiring additional review may take 1-2 business days to process.</p>
+				</details>
+				<div class="phone">
+					<i class="fas fa-phone-alt"></i><a href="tel:920-757-6622">920-757-6622</a>
+				</div>
 			</div>
 		</div>
 	</div>

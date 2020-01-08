@@ -169,22 +169,22 @@
     width: 80%;
   }
   button {
-    background-color: $trueBlack !important;
+    background-color: $black !important;
     transition: .2s ease;
     width: 50%;
     &:hover {
-      background-color: $black !important;
+      background-color: $darkCharcoal !important;
       transition: .2s ease;
     }
   }
   .products {
     .button {
-      background-color: $trueBlack;
+      background-color: $black;
       color: $white;
       transition: .2s ease;
       text-transform: uppercase;
       &:hover {
-        background-color: $black;
+        background-color: $darkCharcoal;
         color: $white;
         transition: .2s ease;
       }
@@ -192,11 +192,11 @@
   }
   .woocommerce-message {
     .button {
-      background-color: $trueBlack;
+      background-color: $black;
       color: $white;
       transition: .2s ease;
       &:hover {
-        background-color: $black;
+        background-color: $darkCharcoal;
         color: $white;
         transition: .2s ease;
       }
@@ -208,7 +208,7 @@
   #searchWrap {
     button {
       background-color: $white !important;
-      color: $trueBlack;
+      color: $black;
     }
   }
   .pswp__button {

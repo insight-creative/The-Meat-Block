@@ -1,15 +1,6 @@
 /*--------------------------------------------------------------
 10.0 Icons
 --------------------------------------------------------------*/
-#redArrow{
-	margin-top: 4px;
-	display: inline-block;
-  width: 20px;
-  height: 20px;
-  stroke-width: 0;
-  stroke: $accentColor;
-  fill: $accentColor;
-}
 .footerSocialIcon{
 	font-size: 40px;
 }
@@ -31,14 +22,6 @@
   stroke-width: 0;
   stroke: $white;
   fill: $white;
-}
-.redIcon{
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  stroke-width: 0;
-  stroke: $accentColor;
-  fill: $accentColor;
 }
 .socialPadding {
 	padding: 0 10px;

@@ -21,9 +21,6 @@
       padding: 50px;
     }
 }
-.homeHero {
-	background-image: url('/wp-content/uploads/2019/09/Screen-Shot-2019-08-12-at-4.08.54-PM.png');
-}
 .iconWrap {
 	img {
 		width: 20%;
@@ -32,6 +29,13 @@
 		top: -20px;
 		@include breakpoint (laptopScreen) {
 			top: -30px;
+		}
+	}
+}
+#sauces-seasonings {
+	.iconWrap {
+		img {
+			width: 6%;
 		}
 	}
 }
@@ -127,7 +131,7 @@
 .testimonial {
 	width: 100%;
 	color: $white;
-	text-shadow: 0 0 5px $trueBlack;
+	text-shadow: 0 0 5px $black;
 	font-weight: 700;
 	@include breakpoint (tabletScreen) {
 		width: 60%;
@@ -163,7 +167,7 @@
 	border-bottom: 1px solid $white;
 	border-right: 1px solid $white;
 }
-#outdoorLiving {
+#outdoorLiving, #qualityGrills {
 	.div-arrow-down:after {
 		background-color: #e9e3e0;
 		border-bottom: 1px solid #e9e3e0;

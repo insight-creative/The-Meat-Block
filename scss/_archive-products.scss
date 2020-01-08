@@ -18,12 +18,12 @@
       }
     }
     .button {
-      background-color: $trueBlack;
+      background-color: $black;
       color: $white;
       transition: .2s ease;
       text-transform: uppercase;
       &:hover {
-        background-color: $black;
+        background-color: $darkCharcoal;
         color: $white;
         transition: .2s ease;
       }

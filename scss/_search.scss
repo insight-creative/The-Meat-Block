@@ -18,7 +18,7 @@
   input {
     width: 100%;
     background-color: $charcoal;
-    border: 1px solid $black;
+    border: 1px solid $darkCharcoal;
     padding: 10px;
   }
   input::-webkit-input-placeholder {
@@ -41,7 +41,7 @@
   text-align: center;
   padding: 10px;
   display: block;
-  background-color: $trueBlack;
+  background-color: $black;
   @include breakpoint (laptopScreen) {
     display: none;
   }
@@ -55,7 +55,7 @@
   input {
     width: 100%;
     background-color: $charcoal;
-    border: 1px solid $black;
+    border: 1px solid $darkCharcoal;
     padding: 10px;
   }
   input::-webkit-input-placeholder {

@@ -234,7 +234,6 @@ function custom_quantity_fields_css(){
     </style>
     <?php
 }
-
 add_action( 'wp_footer' , 'custom_quantity_fields_script' );
 function custom_quantity_fields_script(){
     ?>
@@ -290,11 +289,12 @@ function custom_quantity_fields_script(){
 //// Add custom continue shopping cutton to cart page
 //////////////////////////////////////////////////////////////
 add_action( 'woocommerce_before_cart_collaterals', 'continue_shopping_button', 31 );
-
 function continue_shopping_button() {
   if ( wp_get_referer() ) echo '<i class="fas fa-chevron-left"></i><a class="button continue" href="' . wp_get_referer() . '">Continue Shopping</a>';
 }
-// Set search results to display only 'product' post type results
+///////////////////////////////////////////////////////////////
+//// Set search results to display only 'product' post type results
+//////////////////////////////////////////////////////////////
 if ( !is_admin() ) {
 function searchfilter($query) {
  if ($query->is_search && !is_admin() ) {
@@ -304,10 +304,9 @@ return $query;
 }
 add_filter('pre_get_posts','searchfilter');
 }
-
-/**
- * Enqueue scripts and styles.
- */
+///////////////////////////////////////////////////////////////
+//// Enqueue scripts and styles
+//////////////////////////////////////////////////////////////
 function insightcustom_scripts() {
 	wp_enqueue_style( 'insightcustom-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'insightcustom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -320,11 +319,11 @@ function insightcustom_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'insightcustom_scripts' );
-/**
- * Custom template tags for this theme.
- */
+///////////////////////////////////////////////////////////////
+//// Custom template tags for this theme
+//////////////////////////////////////////////////////////////
 require get_template_directory() . '/inc/template-tags.php';
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
+///////////////////////////////////////////////////////////////
+//// Functions which enhance the theme by hooking into WordPress
+//////////////////////////////////////////////////////////////
 require get_template_directory() . '/inc/template-functions.php';
