@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 2.3.6
  */
 
@@ -73,7 +73,7 @@ defined( 'ABSPATH' ) || exit;
 			}
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
-				foreach ( WC()->cart->get_tax_totals() as $code => $tax ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				foreach ( WC()->cart->get_tax_totals() as $code => $tax ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 					?>
 					<tr class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 						<th><?php echo esc_html( $tax->label ) . $estimated_text; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
@@ -102,30 +102,17 @@ defined( 'ABSPATH' ) || exit;
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
 	</table>
-	<h2>Have a Question?</h2>
-	<div class="checkoutFAQ">
-		<div class="checkoutFAQInner">
-			<div id="accordion">
-				<details>
-					<summary class="accordion_item">
-						<i class="fas fa-plus"></i>
-						<i class="fas fa-minus"></i>
-						<h6 class="noMargin">What forms of payment do you accept?</h6></summary>
-					<p>The Meat Block accepts US-issued major credit cards and PayPal</p>
-				</details>
-				<details>
-					<summary class="accordion_item">
-						<i class="fas fa-plus"></i>
-						<i class="fas fa-minus"></i>
-						<h6 class="noMargin">When will my order by shipped?</h6></summary>
-					<p>Orders placed by 3pm CST Monday-Friday ship the same day pending credit card verification (in-stock merchandise only). Orders requiring additional review may take 1-2 business days to process.</p>
-				</details>
-				<div class="phone">
-					<i class="fas fa-phone-alt"></i><a href="tel:920-757-6622">920-757-6622</a>
-				</div>
-			</div>
+	<!-- <h3>Have a Question?</h3>
+	<div class="help shop_table shop_table_responsive">
+		<div class="help__inner">
+			<ul class="help__list">
+				<li class="help__list-item"><i class="fas fa-phone-alt"></i><a href="tel:920-757-6622">920-757-6622</a></li>
+				<li class="help__list-item"><i class="fas fa-envelope"></i><a href="mailto:info@themeatblock.com">Email Us</a></li>
+				<li class="help__list-item"><i class="fas fa-clock"></i><span>Mon-Fri 9:00 a.m. to 6:00 p.m.<br>
+				Sat 9:00 a.m. to 5:00 p.m.</span></li>
+			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>

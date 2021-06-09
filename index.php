@@ -8,22 +8,22 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id="specials">
-			<div class="fullWidthBlock">
-				<div class="pageWidth contentContainer">
-					<div class="containerInner">
-						<h1 class="whiteText blockTitle"><span class="blackBack">Specials</span></h1>';
+			<div class="full-width-block">
+				<div class="page-width content-container">
+					<div class="container-inner">
+						<h1 class="white-text block-title"><span class="black-back">Specials</span></h1>';
 					</div>
 				</div>
 			</div>
 		</section>
-		<div class="pageWidth paddedTop">
-			<div class="limitWidth">
+		<div class="page-width padded-top">
+			<div class="limit-width">
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nunc id cursus metus aliquam.
 				</p>
 			</div>
 		</div>
-		<div class="pageWidth flex-container-wrapped">
+		<div class="page-width flex-container-wrapped">
 			<?php
 			if ( have_posts() ) :
 				if ( is_home() && ! is_front_page() ) :

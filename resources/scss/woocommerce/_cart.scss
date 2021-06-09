@@ -1,0 +1,109 @@
+.woocommerce-cart {
+	.woocommerce {
+		padding: 50px 0;
+		@include breakpoint(laptopScreen) {
+			padding: 100px 0;
+		}
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	.woocommerce-cart-form__contents {
+		.woocommerce-cart-form__cart-item {
+			td {
+				padding: 2rem 1rem;
+			}
+		}
+		a {
+			font-size: 16px;
+		}
+		.quantity {
+			display: flex;
+		}
+	}
+	.search-wrap {
+		i {
+			color: $black;
+		}
+	}
+	.continue {
+		background-color: $white !important;
+		color: $accentColor !important;
+		&:hover,
+		&:focus {
+			background-color: $white !important;
+			color: $accentColor !important;
+		}
+	}
+	.shop_table {
+		border: 0 !important;
+	}
+	.woocommerce-form-coupon {
+		.form-row-last {
+			.button {
+				background-color: $black;
+				color: $white;
+				transition: 0.2s ease;
+				&:hover,
+				&:focus {
+					background-color: $darkCharcoal;
+					transition: 0.2s ease;
+				}
+			}
+		}
+	}
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		@include breakpoint(tabletScreen) {
+			flex-direction: row;
+			justify-content: center;
+		}
+		@include breakpoint(tabletScreen) {
+			justify-content: flex-start;
+		}
+		li {
+			width: 90%;
+			@include breakpoint(tabletScreen) {
+				width: 25% !important;
+			}
+			@include breakpoint(laptopScreen) {
+				width: 42% !important;
+			}
+		}
+		.button {
+			background-color: $black;
+			color: $white;
+			transition: 0.2s ease;
+			text-transform: uppercase;
+			&:hover,
+			&:focus {
+				background-color: $darkCharcoal;
+				color: $white;
+				transition: 0.2s ease;
+			}
+		}
+	}
+	.coupon {
+		.input-text {
+			width: 170px !important;
+			margin: 2px 5px 0 0 !important;
+		}
+	}
+	.woo_pp_cart_buttons_div {
+		display: none;
+	}
+	.onsale {
+		left: -8px !important;
+		background-color: $accentColor !important;
+	}
+	.cart_totals {
+		tr {
+			th,
+			td {
+				padding: 1rem 0;
+			}
+		}
+	}
+}

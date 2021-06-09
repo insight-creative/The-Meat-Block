@@ -1,5 +1,5 @@
 <section id="contact">
-  <div class="pageWidth flex-container">
+  <div class="page-width flex-container">
     <div class="col50">
       <div>
         <h6><span class="underline">Contact</span> Us</h6>
@@ -7,16 +7,16 @@
           We welcome your feedback or questions. If you are looking for a price on a bus, please
           fill out our online <a href="/request-a-quote/">quote request form</a>.
         </p>
-        <h6 class="noMargin smallHeading">Corporate Office</h6>
+        <h6 class="no-margin small-heading">Corporate Office</h6>
         <p>
           2407 South Point Road<br>
           Green Bay, WI 54313
         </p>
-        <h6 class="noMargin smallHeading">Location Hours</h6>
+        <h6 class="no-margin small-heading">Location Hours</h6>
         <p>
           8 a.m. - 5 p.m.
         </p>
-        <h6 class="noMargin smallHeading">Phone</h6>
+        <h6 class="no-margin small-heading">Phone</h6>
         <p>Lamers Bus Lines<br>
           <a class="plainLink" href="tel:1-800-236-2340"><strong>1-800-236-2340</strong></a><br>
           Lamers Tour and Travel Motor Coach Vacations<br>

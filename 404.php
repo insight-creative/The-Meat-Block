@@ -11,31 +11,34 @@ get_header();
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-		<section class="error-404 not-found pageWidth flex-container">
-			<div class="col70">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'insightcustom' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Take a look at some of the links below or try a search to find what you are looking for? Contact us if the issue persists and you cannot find what you\'re looking for.', 'insightcustom' ); ?></p>
-					<ul>
-						<li><a href="/tour-vacations/">Tour Vacations</li>
-						<li><a href="/lamers-connect/">Lamers Connect</li>
-						<li><a href="/services/">Services</li>
-						<li><a href="/about-us/">About Us</li>
-						<li><a href="/locations/">Locations</li>
-						<li><a href="/sitemap/">Sitemap</li>
-						<li><a href="/contact-us/">Contact Us</li>
-					</ul>
-					<?php
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-				</div><!-- .page-content -->
+		<section id="error">
+			<div class="full-width-block">
+				<div class="page-width content-container">
+					<div class="container-inner">
+						<h1 class="white-text block-title"><span class="black-back">404</span></h1>
+					</div>
+				</div>
 			</div>
-			<div class="col30">
-					<?php get_sidebar(); ?>
-					<?php get_template_part('/inc/blog-sidebar'); ?>
-			</div>
+		</section>
+		<section class="error-404 not-found page-width limit-width padded-section">
+			<header class="page-header">
+				<h1 class="page-title"><?php esc_html_e( 'Oops! It seems that page hasn&rsquo;t been cut yet!', 'insightcustom' ); ?></h1>
+			</header><!-- .page-header -->
+			<div class="page-content">
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Take a look at some of the links below or try a search to find what you are looking for? Contact us if the issue persists and you cannot find what you\'re looking for.', 'insightcustom' ); ?></p>
+				<ul>
+					<li><a href="/shop">Shop Now</li>
+					<li><a href="/foods">Foods</li>
+					<li><a href="/product-category/grills-and-smokers">Grills and Smokers</li>
+					<li><a href="/product-category/grilling-accessories">Grilling Accessories</li>
+					<li><a href="/product-category/fuels">Fuels</li>
+					<li><a href="/product-category/sauces-rubs-and-more">Sauces, Rubs and More</li>
+					<li><a href="/outdoor-living/">Outdoor Living</li>
+					<li><a href="/outdoor-kitchens/">Outdoor Kitchens</li>
+					<li><a href="/sitemap/">Sitemap</li>
+					<li><a href="/contact/">Contact Us</li>
+				</ul>
+			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 	</main><!-- #main -->
 </div><!-- #primary -->

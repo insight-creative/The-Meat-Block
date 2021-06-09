@@ -1,0 +1,30 @@
+.outdoor-brands-grid {
+	display: grid;
+	gap: 3rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	margin-top: 3rem;
+	.outdoor-brand {
+		text-align: center;
+		max-width: 300px;
+		transition: 0.3s ease;
+		&__link {
+			&:hover,
+			&:focus {
+				color: $accentColor;
+				.outdoor-brand__logo {
+					opacity: 0.7;
+				}
+			}
+		}
+		&__logo-wrapper {
+			height: 125px;
+		}
+		&__logo {
+			transition: 0.3s ease;
+		}
+		&__name {
+			color: $accentColorDark;
+			font-size: 1.2em;
+		}
+	}
+}

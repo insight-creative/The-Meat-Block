@@ -1,0 +1,168 @@
+.site-footer {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $black;
+	a {
+		&:after {
+			width: 0;
+		}
+	}
+}
+.footer-content {
+	padding: 0;
+	background-image: url("/wp-content/uploads/2019/09/fire-background-1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	@include breakpoint(tabletScreen) {
+		padding: 20px;
+	}
+	p,
+	a {
+		font-size: 14px;
+		line-height: 1.4em;
+		max-width: 600px;
+	}
+	&__inner {
+		justify-content: space-between;
+		position: relative;
+		background-color: $black;
+		padding: 20px 0;
+		@include breakpoint(laptopScreen) {
+			padding: 20px;
+			top: -50px;
+		}
+	}
+	&__bottom {
+		padding-bottom: 100px;
+	}
+}
+.footer-menu,
+.policies-menu {
+	li a {
+		left: 0;
+		transition: 0.3s ease;
+		&:hover,
+		&:focus {
+			left: 5px;
+			color: $accentColor !important;
+		}
+	}
+}
+#copyright {
+	color: $white;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 25px 0;
+	@include breakpoint(tabletScreen) {
+		flex-direction: row;
+		padding: 0;
+	}
+	p {
+		margin-top: 0;
+		margin-bottom: 0 !important;
+	}
+	@include breakpoint(largeScreen) {
+		flex-direction: row;
+	}
+	a:first-of-type {
+		margin-left: 5px;
+	}
+	a {
+		color: $accentColor;
+		transition: 0.2s ease;
+		margin-right: 5px;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			transition: 0.2s ease;
+		}
+	}
+	nav {
+		width: auto;
+	}
+	.last {
+		margin-right: 0;
+	}
+}
+.footer-link-wrap {
+	display: flex;
+	flex-direction: column;
+}
+.social-wrapper {
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	@include breakpoint(laptopScreen) {
+		margin: 0;
+	}
+	img {
+		margin: 20px 0;
+		width: 15%;
+		@include breakpoint(laptopScreen) {
+			width: 35%;
+		}
+	}
+}
+#social {
+	margin-top: 10px;
+}
+.newsletter-wrap {
+	.gform_wrapper .gform_heading {
+		margin-bottom: 0;
+	}
+	.gform_description,
+	.gform_wrapper .top_label .gfield_label,
+	.gform_wrapper legend.gfield_label {
+		color: $white;
+		font-size: 14px;
+		width: 100% !important;
+		margin-bottom: 0 !important;
+	}
+	.gform_wrapper ul.gform_fields li.gfield {
+		padding-right: 0;
+	}
+	input[type="text"],
+	input[type="submit"] {
+		width: 100% !important;
+		border-radius: 0 !important;
+	}
+	.gform_footer {
+		margin: 0 !important;
+		.button {
+			background: $accentColorDark !important;
+			border: $accentColorDark !important;
+			color: $black !important;
+			&:hover,
+			&:focus {
+				background: $accentColor !important;
+			}
+		}
+	}
+}
+.footer-copyright {
+	background-color: $black;
+	padding: 20px;
+}
+.brand-logos {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	justify-content: flex-start;
+	img {
+		width: auto;
+		height: 30px;
+		margin: 0 10px;
+		@include breakpoint(largeMobileScreen) {
+			height: 50px;
+		}
+		@include breakpoint(tabletScreen) {
+			height: 60px;
+		}
+	}
+}

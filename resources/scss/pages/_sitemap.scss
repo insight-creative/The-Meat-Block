@@ -1,0 +1,35 @@
+#sitemapEntry {
+	@include breakpoint(smallScreen) {
+		margin-top: 75px;
+	}
+	@include breakpoint(largeMobileScreen) {
+		margin-top: 75px;
+	}
+	@include breakpoint(laptopScreen) {
+		margin-top: 150px;
+	}
+}
+#text {
+	display: none;
+}
+.newsPosts {
+	padding-left: 40px;
+	a {
+		text-decoration: none;
+		-webkit-transition: 0.2s ease all;
+		transition: 0.2s ease all;
+		position: relative;
+		&:hover,
+		&:focus {
+			color: $accentColor;
+			-webkit-transition: 0.2s ease all;
+			transition: 0.2s ease all;
+		}
+	}
+}
+.pagenav {
+	list-style-type: none;
+	ul {
+		padding-left: 40px;
+	}
+}

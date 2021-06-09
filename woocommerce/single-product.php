@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-<div class="pageWidth paddedSection">
+<div class="page-width padded-section">
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.

@@ -1,24 +1,24 @@
 // Toggle menu
 $(function() {
-    $(".menuButtonWrap").click(function(e){
+    $(".menu-button-wrap").click(function(e){
         $(".main-menu").toggleClass("open");
         	e.stopPropagation();
     });
 });
 $(function() {
-    $("#closeMenu").click(function(e){
+    $("#close-menu").click(function(e){
         $(".main-menu").toggleClass("open");
         	e.stopPropagation();
     });
 });
 // Hamburger menu animation
 $(function() {
-    $(".menuButtonWrap").click(function(e){
+    $(".menu-button-wrap").click(function(e){
         $(".hamburger").toggleClass("is-active");
     });
 });
 $(function() {
-    $("#closeMenu").click(function(e){
+    $("#close-menu").click(function(e){
         $(".hamburger").toggleClass("is-active");
     });
 });
@@ -29,6 +29,8 @@ $(function() {
         	e.stopPropagation();
     });
 });
+const searchButton = document.querySelector( ".search" );
+const searchWrapper = document.querySelector( ".search-form-wrap" );
 // Toggle search icon
 $(function() {
     $("#search").click(function(e){

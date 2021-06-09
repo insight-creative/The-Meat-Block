@@ -1,4 +1,4 @@
-<nav id="primary" class="site-navigation" role="navigation" aria-label="primary navigation">
+<nav class="primary site-navigation" role="navigation" aria-label="primary navigation">
   <div class="main-menu-wrapper">
     <ul class="main-menu menu">
     <?php
@@ -10,17 +10,18 @@
             'items_wrap' 				=> '%3$s'
         ) );
         //add search form search-toggle
+        //echo '<li id="site-search" class="search-toggle">' . get_search_form( false ) . '</li>';
       ?>
-      <div id="searchWrap">
-        <button id="search">
+      <div class="search-wrap">
+        <button class="search">
           <i class="fas fa-search"></i>
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <div id="mobileSearch">
+      <div id="mobile-search">
         <?php get_search_form(); ?>
       </div>
-      <button id="closeMenu">
+      <button id="close-menu">
         <i class="fas fa-chevron-up"></i><span id="close">Close</span><i class="fas fa-chevron-up"></i>
       </button>
     </ul>

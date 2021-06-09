@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
-<div class="pageWidth">
+<div class="page-width">
 	<?php
 	/**
 	 * Hook: woocommerce_before_main_content.
@@ -32,9 +32,9 @@ get_header();
 	do_action( 'woocommerce_before_main_content' );
 	?>
 </div>
-<div class="flex-container productContainer">
+<div class="flex-container product-container">
 	<div class="col20 filter">
-		<div class="filterInner">
+		<div class="filter-inner">
 			<?php
 			/**
 			 * Hook: woocommerce_sidebar.
@@ -45,7 +45,7 @@ get_header();
 			?>
 		</div>
 	</div>
-	<div class="col80 productWrapper">
+	<div class="col80 product-wrapper">
 		<header class="woocommerce-products-header">
 			<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 				<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>

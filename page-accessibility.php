@@ -9,7 +9,7 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id="pageContent">
-			<div class="limitWidth paddedSection">
+			<div class="limit-width padded-section">
 				<h1>Website Accessibility</h1>
 				<p>
 					<?php printf( get_bloginfo ( 'name' ) ); ?> is committed to the accessibility and
@@ -77,7 +77,7 @@ get_header();
 					For mobile devices, just enter your settings and click on the Accessibility tab for the option to change the text size to suit you.
 				</p>
 				<!-- Add Contact Form Here -->
-				<?php echo do_shortcode('[caldera_form id="CF5e162cd5f2459"]'); ?>
+				<?php echo do_shortcode('[gravityforms id="1"]'); ?>
 			</div>
 		</section>
 	</main>

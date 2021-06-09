@@ -1,5 +1,5 @@
 <section class="removeBottomMargin">
-  <div class="fullWidth flex-container centerAlignedContainer">
+  <div class="full-width flex-container center-aligned-container">
     <div class="col50">
       <?php
         $image = get_field('intro_image');
@@ -7,8 +7,8 @@
         echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
       ?>
     </div>
-    <div class="col50 centerTextBlock">
-      <div class="textWrap textBlock">
+    <div class="col50 center-text-block">
+      <div class="text-wrap text-block">
         <?php if( get_field('intro_headline') ): ?>
         	<?php the_field('intro_headline'); ?>
         <?php endif; ?>

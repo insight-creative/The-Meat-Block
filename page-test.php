@@ -10,7 +10,10 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<?php if (have_rows('flexible_columns')): ?>
-    <div class="pageWidth">
+    <div class="page-width">
+			<?php
+				echo phpinfo();
+			 ?>
         <?php
         while (have_rows('flexible_columns')) : the_row();
         	// one column layout

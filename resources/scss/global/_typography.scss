@@ -1,0 +1,121 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $black;
+	font-family: $roboto;
+	font-size: 18px;
+	line-height: 1.4em;
+	@include breakpoint(largeMobileScreen) {
+		font-size: 20px;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $roboto;
+	font-weight: 700;
+	line-height: 1.2em;
+	margin-top: 0;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+	@include breakpoint(tabletScreen) {
+		font-size: 1.8em;
+	}
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.4em;
+}
+h5 {
+	font-size: 1.2em;
+}
+h6 {
+	font-size: 1em;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1em !important;
+}
+.white-text {
+	color: $white;
+}
+.white-glow {
+	color: $black;
+	text-shadow: 5px 5px 10px $white;
+}
+.block-title {
+	padding: 0 20px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-family: $almaq;
+	font-weight: 500;
+	letter-spacing: 5px;
+	@include breakpoint(largeMobileScreen) {
+		font-size: 2em;
+	}
+	@include breakpoint(laptopScreen) {
+		font-size: 3em;
+	}
+}
+.hero-subtitle {
+	font-family: $veltro;
+	text-transform: initial;
+	font-size: 2.8em;
+	line-height: 1em;
+	font-weight: normal;
+	position: relative;
+	top: -25px;
+	@include breakpoint(largeMobileScreen) {
+		font-size: 3.6em;
+	}
+}
+.center-text {
+	text-align: center;
+}
+.large-heading {
+	font-size: 1.7em;
+	font-weight: 700;
+}
+.medium-heading {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.small-heading {
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+.underline {
+	background-image: -webkit-linear-gradient(
+		left,
+		$accentColor 100%,
+		transparent 0
+	);
+	background-image: linear-gradient(to right, $accentColor 100%, transparent 0);
+	background-position: 0 1.06em;
+	background-repeat: repeat-x;
+	background-size: 8px 5px;
+}
+.font-light {
+	font-weight: 400;
+}
+.accent-text {
+	color: $accentColorDark;
+}
+.veltro {
+	font-family: $veltro;
+	font-size: 30px;
+}

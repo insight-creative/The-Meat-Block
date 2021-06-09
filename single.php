@@ -5,11 +5,11 @@
 
 get_header();
 ?>
-	<div class="pageWidth paddedSection">
+	<div class="page-width padded-section">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
-				<div class="pageWidth">
-					<div class="postWrapper">
+				<div class="page-width">
+					<div class="post-wrapper">
 						<?php
 						while ( have_posts() ) :
 							the_post();
@@ -20,7 +20,7 @@ get_header();
 				</div>
 			</main><!-- #main -->
 		</div><!-- #primary -->
-		<div class="paddedSection greyBorderTop">
+		<div class="padded-section gray-borderTop">
 			<?php the_post_navigation(); ?>
 		</div>
 	</div>

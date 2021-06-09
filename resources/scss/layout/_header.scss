@@ -1,0 +1,388 @@
+.skip-to-content {
+	position: absolute;
+	top: -100px;
+	&:focus {
+		left: 6px;
+		top: 7px;
+		height: auto;
+		width: auto;
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 15px 23px 14px;
+		background: $accentColorDark;
+		color: $white;
+		z-index: 100000;
+		line-height: normal;
+		text-decoration: none;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	}
+}
+.site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	width: 100%;
+	transition: 0.3s ease;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	@include breakpoint(laptopScreen) {
+		position: fixed;
+	}
+}
+.masthead-container {
+	background: $black;
+	padding: 10px 0;
+}
+.masthead-inner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.site-navigation {
+	background: $white;
+	.search-wrap {
+		.search-btn {
+			color: $black;
+		}
+	}
+}
+.scrollUp {
+	transform: translateY(0);
+	transition: 0.3s ease;
+	@include breakpoint(laptopScreen) {
+		transform: translateY(-72%);
+	}
+}
+#hours {
+	font-size: 14px;
+	display: none;
+	width: 30%;
+	@include breakpoint(laptopScreen) {
+		display: block;
+		width: 33%;
+	}
+}
+#site-logo {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 200px;
+	width: 45%;
+	padding-top: 10px;
+	@include breakpoint(laptopScreen) {
+		max-width: 450px;
+		left: 0;
+		width: 35%;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+#mini-nav {
+	font-size: 14px;
+	width: 25%;
+	display: flex;
+	justify-content: flex-end;
+	@include breakpoint(laptopScreen) {
+		width: 33%;
+		flex-direction: column;
+	}
+}
+.cart-wrapper,
+.menu-mini-menu-container {
+	display: flex;
+	justify-content: flex-end;
+}
+.main-menu-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	@include breakpoint(laptopScreen) {
+		width: 95%;
+	}
+	@include breakpoint(largeScreen) {
+		width: 70%;
+	}
+}
+.main-menu {
+	display: none;
+	li {
+		list-style-type: none;
+		font-size: 18px;
+		padding: 15px 5px;
+		border-bottom: 1px solid $darkCharcoal;
+		@include breakpoint(laptopScreen) {
+			font-size: 12px;
+			padding: 10px 5px !important;
+			border-bottom: none;
+		}
+	}
+	a {
+		font-family: $roboto;
+		font-size: 18px;
+		font-weight: 700;
+		color: $darkCharcoal !important;
+		padding: 10px;
+		@include breakpoint(laptopScreen) {
+			font-size: 12px;
+		}
+		@include breakpoint(largeScreen) {
+			font-size: 14px;
+		}
+	}
+	@include breakpoint(laptopScreen) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		position: relative;
+		padding: 10px 0;
+		background: $white;
+	}
+}
+#SecondaryMenu {
+	margin: 0;
+	padding: 0;
+	display: none;
+	@include breakpoint(laptopScreen) {
+		display: flex;
+		flex-direction: row;
+	}
+	li {
+		padding: 5px;
+		list-style-type: none;
+		a {
+			text-decoration: none;
+			color: $white;
+			font-family: $roboto;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: 500;
+			transition: 0.2s ease;
+			&:hover,
+			&:focus {
+				transition: 0.2s ease;
+				color: $accentColor;
+			}
+			&:focus {
+				transition: 0.2s ease;
+				color: $accentColor;
+			}
+		}
+	}
+}
+.cart-contents:before {
+	font-family: WooCommerce;
+	content: "\e01d";
+	font-size: 28px;
+	margin-top: 10px;
+	font-style: normal;
+	font-weight: 400;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+#shop-button {
+	margin: 0 5px;
+	display: none;
+	@include breakpoint(laptopScreen) {
+		display: block;
+	}
+}
+.cart-contents:hover {
+	text-decoration: none;
+}
+.cart-contents-count {
+	color: #fff;
+	background-color: $accentColor;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 1px 6px;
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+#close-menu {
+	background-color: $accentColor;
+	color: $white;
+	padding: 10px;
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		display: none;
+	}
+}
+#close {
+	margin: 0 10px;
+}
+.menuLinkWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.entry-header {
+	display: none;
+}
+nav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	a {
+		&:after {
+			width: 0;
+		}
+	}
+}
+.menu-button-wrap {
+	display: flex;
+	width: 20%;
+	@include breakpoint(smallScreen) {
+		padding: 15px 0 15px 15px;
+	}
+	@include breakpoint(laptopScreen) {
+		display: none;
+	}
+}
+// Add Animation to our hamburger Menu
+.hamburger {
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+	padding-top: 5px;
+}
+.hamburger:hover {
+	opacity: 0.7;
+}
+.hamburger.is-active:hover {
+	opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner:after {
+	background-color: $white;
+}
+
+.hamburger-box {
+	width: 30px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+	width: 30px;
+	height: 3px;
+	background-color: $accentColor;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+.hamburger-inner:before,
+.hamburger-inner:after {
+	content: "";
+	display: block;
+}
+.hamburger-inner:before {
+	top: -10px;
+}
+.hamburger-inner:after {
+	bottom: -10px;
+}
+/*
+* Collapse
+*/
+.hamburger--collapse .hamburger-inner {
+	top: auto;
+	bottom: -2px;
+	transition-duration: 0.13s;
+	transition-delay: 0.13s;
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner:after {
+	top: -20px;
+	transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+		opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner:before {
+	transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+		-webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+		transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+		transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+		-webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+	transform: translate3d(0, -10px, 0) rotate(-45deg);
+	transition-delay: 0.22s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner:after {
+	top: 0;
+	opacity: 0;
+	transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+		opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner:before {
+	top: 0;
+	transform: rotate(-90deg);
+	transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+		-webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+		transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+		transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+		-webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.collapse {
+	@include breakpoint(laptopScreen) {
+		animation: collapse 0.7s ease forwards;
+	}
+}
+
+// Open nav bar on scroll up
+.expand {
+	@include breakpoint(laptopScreen) {
+		animation: expand 0.7s ease forwards;
+	}
+}
+
+@keyframes collapse {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes expand {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

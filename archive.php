@@ -10,14 +10,13 @@
 get_header();
 ?>
 
-<?php get_template_part('/inc/breadcrumbs'); ?>
-	<div class="pageWidth paddedSection">
+	<div class="page-width padded-section">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 				<div class="flex-container">
-					<div class="col70 postWrapper">
+					<div class="col70 post-wrapper">
 						<?php if ( have_posts() ) : ?>
-							<header class="page-header greyBorder">
+							<header class="page-header gray-border">
 								<?php
 								the_archive_title( '<h1 class="page-title">', '</h1>' );
 								the_archive_description( '<div class="archive-description">', '</div>' );
@@ -41,7 +40,7 @@ get_header();
 						?>
 					</div>
 					<div class="col30">
-						<div class="paddedSection">
+						<div class="padded-section">
 							<?php get_sidebar(); ?>
 							<?php get_template_part('/inc/blog-sidebar'); ?>
 						</div>

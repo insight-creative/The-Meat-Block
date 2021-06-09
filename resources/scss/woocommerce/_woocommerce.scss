@@ -1,0 +1,32 @@
+.related {
+	padding-bottom: 25px;
+}
+button {
+	color: $white;
+	text-transform: uppercase;
+}
+.woocommerce-info {
+	border-top-color: $accentColor !important;
+}
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top-color: $accentColor !important;
+	&:before {
+		color: $accentColor !important;
+	}
+}
+.woocommerce-info::before {
+	color: $accentColor !important;
+}
+.button {
+	background-color: $black !important;
+	color: $white !important;
+	transition: 0.2s ease;
+	border-radius: 0 !important;
+	text-transform: uppercase;
+	&:hover,
+	&:focus {
+		background-color: $darkCharcoal !important;
+	}
+}

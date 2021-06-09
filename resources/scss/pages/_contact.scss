@@ -1,0 +1,66 @@
+#contact {
+	.col50 {
+		@include breakpoint(laptopScreen) {
+			padding-right: 20px;
+		}
+	}
+}
+.gform_wrapper .top_label .gfield_label,
+.gform_wrapper legend.gfield_label {
+	color: #000000;
+	font-family: $roboto;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.gfield_required {
+	color: $accentColor !important;
+}
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper textarea {
+	border-radius: 5px;
+	border: 1px solid $darkGrey !important;
+	padding: 5px !important;
+}
+.gform_wrapper input[type="submit"] {
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	font-family: $roboto;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	border: 2px solid $black;
+	background: $black;
+	width: fit-content;
+	color: $white;
+	transition: 0.2s ease all;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		transition: 0.2s ease all;
+		background: $darkCharcoal;
+		border: 2px solid $darkCharcoal;
+		transition: 0.2s ease all;
+		box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+#formWrap {
+	@include breakpoint(laptopScreen) {
+		margin-bottom: 50px;
+	}
+}
+.form-wrapper {
+	padding: 20px;
+	background-color: $lightGrey;
+}
+.small-map-wrapper {
+	padding: 40px 20px 20px 20px;
+}
+#thank-you {
+	background-image: url("/wp-content/uploads/2020/01/the-meat-block-foods-hero.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

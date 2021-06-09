@@ -1,0 +1,46 @@
+a,
+a:visited,
+a:hover,
+a:active {
+	position: relative;
+	transition: 0.5s color ease;
+	text-decoration: none;
+	color: $accentColorDark;
+	font-weight: 500;
+	transition: 0.1s ease;
+}
+.btn {
+	font-weight: 700 !important;
+	text-transform: uppercase;
+	padding: 5px 25px;
+	transition: 0.3s ease !important;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.primary-button {
+	font-size: 16px !important;
+	border: 2px solid $accentColorDark;
+	background: $accentColorDark;
+	color: $black !important;
+	&:hover,
+	&:focus {
+		background: $accentColor;
+		border: 2px solid $accentColor;
+	}
+}
+.primary-button-alt {
+	font-size: 22px;
+	border: 2px solid $black;
+	background: $black;
+	color: $white !important;
+	&:hover,
+	&:focus {
+		background: $charcoal;
+		border: 2px solid $charcoal;
+		color: $white;
+	}
+}
+button {
+	background-color: $transparent;
+	border: none;
+}

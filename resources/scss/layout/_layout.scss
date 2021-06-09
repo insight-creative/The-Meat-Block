@@ -1,0 +1,284 @@
+.col20 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 20%;
+	}
+}
+.col25 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 25%;
+	}
+}
+.col30 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 33.3333%;
+	}
+}
+.col30SplitTablet {
+	width: 100%;
+	@include breakpoint(largeMobileScreen) {
+		width: 50%;
+	}
+	@include breakpoint(largeScreen) {
+		width: 33.3333%;
+	}
+}
+.col40 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 40%;
+	}
+}
+.col50 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 50%;
+	}
+}
+.col60 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 60%;
+	}
+}
+.col70 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 70%;
+	}
+}
+.col80 {
+	width: 100%;
+	@include breakpoint(laptopScreen) {
+		width: 80%;
+	}
+}
+.page-width {
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+	@include breakpoint(largeScreen) {
+		width: 70%;
+	}
+}
+.full-width {
+	width: 100%;
+}
+.nav-width {
+	height: 100%;
+	margin: 0 auto;
+	width: 95%;
+	@include breakpoint(largeScreen) {
+		width: 90%;
+	}
+}
+.full-width-block {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 150px 0;
+}
+.block-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0;
+	@include breakpoint(laptopScreen) {
+		padding: 10px;
+	}
+}
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(laptopScreen) {
+		flex-direction: row;
+	}
+}
+.flex-container-reverse {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	@include breakpoint(laptopScreen) {
+		flex-direction: row;
+	}
+}
+.flex-container-wrapped {
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(laptopScreen) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+.col-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+	justify-content: center;
+	@include breakpoint(tabletScreen) {
+		flex-direction: row;
+	}
+}
+.center-aligned-container {
+	display: flex;
+	align-items: center;
+}
+.text-wrap {
+	padding: 0 10px;
+	@include breakpoint(tabletScreen) {
+		padding: 0 20px;
+	}
+}
+.image {
+	width: 100%;
+	height: auto;
+}
+.text-block {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(laptopScreen) {
+		max-width: 700px;
+	}
+}
+.center-text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.black-back {
+	background-color: $black;
+	padding: 10px 20px;
+}
+.page-content {
+	position: relative;
+	z-index: 2;
+	margin-top: 50px;
+	background: $white;
+}
+.padded-section {
+	padding: 25px 0;
+	@include breakpoint(tabletScreen) {
+		padding: 50px 0;
+	}
+}
+.padded-top {
+	padding-top: 25px;
+	@include breakpoint(tabletScreen) {
+		padding-top: 50px;
+	}
+}
+.padded-bottom {
+	padding-bottom: 25px;
+	@include breakpoint(tabletScreen) {
+		padding-bottom: 50px;
+	}
+}
+.limit-width {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.site-content {
+	margin-top: 70px;
+	@include breakpoint(laptopScreen) {
+		margin-top: 140px;
+	}
+}
+.no-margin {
+	margin: 0 !important;
+}
+.twoCol {
+	position: relative;
+	box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.5);
+	transition: 0.3s ease;
+	.featured-heading {
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		h6 {
+			font-size: 1.6em;
+			margin-bottom: 0;
+			color: $white;
+			transition: 0.3s ease;
+		}
+	}
+	.featured-heading-inner {
+		padding: 20px 20px 20px 40px;
+	}
+	.center-text:last-of-type {
+		position: absolute;
+		bottom: 50px;
+	}
+	a {
+		&:hover,
+		&:focus {
+			h6 {
+				color: $accentColor;
+				transition: 0.3s ease;
+			}
+		}
+	}
+}
+.threeCol {
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	&:hover,
+	&:focus {
+		.smallArrow {
+			margin-left: 15px;
+			transition: 0.2s ease;
+		}
+	}
+	a {
+		&:hover,
+		&:focus {
+			&:before {
+				width: 0;
+				transition: 0.5s all ease;
+			}
+		}
+	}
+}
+.colLeft {
+	margin-bottom: 15px;
+	@include breakpoint(tabletScreen) {
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+	.image {
+		width: 100%;
+		position: relative;
+	}
+}
+.colMiddle {
+	margin: 10px 0 15px 0;
+	@include breakpoint(tabletScreen) {
+		margin: 0 10px;
+	}
+}
+.colRight {
+	margin-top: 10px;
+	@include breakpoint(tabletScreen) {
+		margin-left: 10px;
+		margin-top: 0;
+	}
+	.image {
+		width: 100%;
+		position: relative;
+	}
+}
+.colLogo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

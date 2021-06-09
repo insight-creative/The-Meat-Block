@@ -9,10 +9,10 @@
 
 ?>
 <div class="articleWrapper">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="flex-container-reverse paddedSection greyBorder">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+		<div class="flex-container-reverse padded-section gray-border">
 			<div>
-				<div class="textWrap">
+				<div class="text-wrap">
 					<div class="thumbnailWrapper">
 						<?php insightCustom_post_thumbnail(); ?>
 					</div>
@@ -21,7 +21,7 @@
 						if ( is_singular() ) :
 							the_title( '<h1 class="entry-title">', '</h1>' );
 						else :
-							the_title( '<h2 class="entry-title mediumHeading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+							the_title( '<h2 class="entry-title medium-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 						endif;
 						if ( 'post' === get_post_type() ) :
 							?>
@@ -38,7 +38,7 @@
 							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						);
 						?>
-						<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark" class="primaryButton"><?php echo $read_more_link; ?></a>
+						<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark" class="btn primary-button"><?php echo $read_more_link; ?></a>
 					</div>
 				</div>
 			</div>

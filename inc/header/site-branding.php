@@ -1,8 +1,8 @@
-<div id="searchFormWrap" class="pageWidth">
+<div class="search-form-wrap page-width">
   <?php get_search_form(); ?>
 </div>
-<div id="mastheadInner" class="pageWidth whiteText">
-  <div class = "menuButtonWrap" aria-label="mobile menu toggle button" tabindex="0">
+<div class="masthead-inner page-width white-text">
+  <div class="menu-button-wrap" aria-label="mobile menu toggle button" tabindex="0">
     <button class="hamburger hamburger--collapse" type="button" aria-label="Mobile menu button" aria-expanded="false">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
@@ -10,13 +10,10 @@
     </button>
   </div>
   <div id="hours">
-    <p>
-      <strong>Hours:</strong> Monday - Friday 9:00 a.m. to 6:00 p.m.<br>
-      Saturdays 9:00 a.m. to 5:00 p.m.
-    </p>
+    <?php echo get_theme_mod('hours'); ?>
   </div>
-  <div id="siteLogo">
-    <a href="<?=site_url()?>" id="siteLogo">
+  <div id="site-logo">
+    <a href="<?=site_url()?>">
       <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
         $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         if ( function_exists( 'the_custom_logo' ) ) {
@@ -27,9 +24,9 @@
       ?>
     </a>
   </div>
-  <div id="miniNav">
-    <div id="cartWrapper" class="centerAlignedContainer">
-      <a href="/shop" id="shopButton" class="animated-button primaryButton">SHOP NOW</a>
+  <div id="mini-nav">
+    <div class="cart-wrapper center-aligned-container">
+      <a href="/shop" id="shop-button" class="btn animated-button primary-button">Shop Now</a>
       <?php global $woocommerce; ?>
        <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"
       title="<?php _e('Cart View', 'woothemes'); ?>">

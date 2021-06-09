@@ -7,8 +7,8 @@ get_header();
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-		<section class="paddedSection">
-			<div class="pageWidth limitWidth">
+		<section class="padded-section">
+			<div class="page-width">
 					<?php
 					while ( have_posts() ) :
 						the_post();

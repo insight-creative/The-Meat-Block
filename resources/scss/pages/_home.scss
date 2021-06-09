@@ -1,0 +1,212 @@
+.content-container {
+	display: flex;
+	align-items: center;
+}
+.container-inner {
+	margin: 0 auto;
+	text-align: center;
+}
+.heroHeading {
+	padding: 25px;
+	border-radius: 3px;
+	@include breakpoint(smallScreen) {
+		padding: 20px;
+	}
+	@include breakpoint(largeMobileScreen) {
+		padding: 50px;
+	}
+}
+.icon-wrap {
+	img {
+		display: inline-block;
+		width: 20%;
+		height: auto;
+		position: relative;
+		top: -20px;
+		@include breakpoint(laptopScreen) {
+			top: -30px;
+		}
+	}
+}
+#sauces-seasonings {
+	.icon-wrap {
+		img {
+			width: 6%;
+		}
+	}
+}
+.logo-wrap {
+	img {
+		width: 70%;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+.full-width-back {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.background-overlay {
+	background-color: rgba(233, 227, 224, 0.6);
+}
+#featuredProducts {
+	background-image: url("/wp-content/uploads/2019/09/wood-grain-background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.featured {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: $white;
+	padding: 10px;
+	height: 55%;
+	width: 100%;
+	transition: 0.2s ease;
+	@include breakpoint(largeMobileScreen) {
+		height: 40%;
+	}
+	@include breakpoint(tabletScreen) {
+		height: 70%;
+	}
+	@include breakpoint(laptopScreen) {
+		height: 60%;
+	}
+	@media (min-width: 1900px) {
+		height: 50%;
+	}
+	h6 {
+		color: $white !important;
+		text-transform: uppercase;
+		font-size: 1.4em;
+		line-height: 1em;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 18px;
+		margin-bottom: 0 !important;
+		line-height: 1.2em;
+		color: $white !important;
+	}
+}
+.innerFlexWrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include breakpoint(laptopScreen) {
+		flex-direction: row;
+	}
+}
+.logo {
+	max-width: 450px;
+}
+.latest-specials {
+	background-image: url("/wp-content/uploads/2019/09/wood-grain-background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.specials-grid {
+	display: grid;
+	gap: 1rem;
+	@include breakpoint(tabletScreen) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.special {
+		max-width: 350px;
+		margin: 0 auto;
+		box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+		@include breakpoint(tabletScreen) {
+			max-width: 100%;
+		}
+		@include breakpoint(laptopScreen) {
+			transition: 0.3s ease;
+			&:hover,
+			&:focus {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+#testimonial {
+	.full-width-block {
+		padding: 200px 0;
+	}
+}
+.homepage-testimonial {
+	background-image: url("/wp-content/uploads/2020/01/cook-out.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	.full-width-block {
+		padding: 200px 0;
+	}
+}
+.testimonial-wrapper {
+	height: 100px;
+	@include breakpoint(largeScreen) {
+		height: 300px;
+	}
+}
+.testimonial-inner {
+	display: flex;
+	justify-content: flex-end;
+}
+.testimonial {
+	width: 100%;
+	color: $white;
+	text-shadow: 0 0 5px $black;
+	font-weight: 700;
+	@include breakpoint(tabletScreen) {
+		width: 60%;
+	}
+	@include breakpoint(laptopScreen) {
+		width: 40%;
+	}
+}
+.divider {
+	position: relative;
+	height: 1px;
+}
+.div-transparent:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgb(255, 255, 255),
+		transparent
+	);
+}
+.div-arrow-down:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -12px;
+	left: calc(50% - 10px);
+	width: 25px;
+	height: 25px;
+	transform: rotate(45deg);
+	background-color: white;
+	border-bottom: 1px solid $white;
+	border-right: 1px solid $white;
+}
+#outdoorLiving,
+#qualityGrills {
+	.div-arrow-down:after {
+		background-color: #e9e3e0;
+		border-bottom: none;
+		border-right: none;
+		background: rgb(233, 227, 224);
+		background: linear-gradient(
+			-45deg,
+			rgba(233, 227, 224, 1) 50%,
+			rgba(29, 43, 86, 0) 100%
+		);
+	}
+}

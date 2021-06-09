@@ -1,0 +1,31 @@
+html {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+body {
+	background: $white;
+	margin: 0;
+	overflow-x: hidden;
+}
+// Style highlight to match our themes colors
+::-moz-selection {
+	background: rgba(182, 174, 140, 0.5);
+}
+::selection {
+	background: rgba(182, 174, 140, 0.5);
+}
+::-ms-selection {
+	background: rgba(182, 174, 140, 0.5);
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+.universal-content-area {
+	ul {
+		padding: 20px;
+	}
+}
+sup {
+	top: 0em;
+}

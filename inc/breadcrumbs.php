@@ -1,9 +1,9 @@
 <div class="breadcrumbs">
-  <div class="navWidth">
+  <div class="nav-width">
     <?php
       if ( function_exists('yoast_breadcrumb') ) {
         yoast_breadcrumb('
-        <p id="breadcrumbs" class="noMargin">','</p>');
+        <p id="breadcrumbs" class="no-margin">','</p>');
       }
     ?>
   </div>

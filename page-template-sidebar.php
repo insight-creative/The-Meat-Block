@@ -6,7 +6,7 @@
 get_header();
 ?>
 <div id="primary" class="universal-content-area">
-	<main id="home" class="site-main">
+	<main class="site-main">
 		<?php
 		////////////////////////////////
 		// Stand alone hero block
@@ -16,13 +16,13 @@ get_header();
 				if( get_row_layout() == 'hero_block' ):
 					?>
 					<section id="<?php echo get_sub_field('section_name'); ?>">
-						<div class="fullWidthBlock" style="background-image: url('<?php echo get_sub_field('full_width_background'); ?>')";>
+						<div class="full-width-block" style="background-image: url('<?php echo get_sub_field('full_width_background'); ?>')";>
 						<?php
 						if( get_sub_field('hero_title') ):
 						?>
-						<div class="pageWidth contentContainer">
-							<div class="containerInner">
-								<h1 class="whiteText blockTitle"><span class="blackBack"><?php echo get_sub_field('hero_title'); ?></span></h1>
+						<div class="page-width content-container">
+							<div class="container-inner">
+								<h1 class="white-text block-title"><span class="black-back"><?php echo get_sub_field('hero_title'); ?></span></h1>
 							</div>
 						</div>
 						<?php
@@ -37,7 +37,7 @@ get_header();
 			endwhile;
 		endif;
 		?>
-		<div class="pageWidth flex-container">
+		<div class="page-width flex-container">
 			<div class="col30">
 				<?php get_template_part('/inc/sidebar/sidebar-menu'); ?>
 				<?php get_template_part('/inc/sidebar/smallCTA'); ?>
@@ -56,30 +56,30 @@ get_header();
 						<section id="<?php echo get_sub_field('section_name'); ?>">
 							<div class="divider div-transparent div-arrow-down">
 							</div>
-							<div class="fullWidthBlock" style="background-image: url('<?php echo get_sub_field('full_width_background'); ?>')";>
-								<div class="pageWidth contentContainer">
-									<div class="containerInner">
+							<div class="full-width-block" style="background-image: url('<?php echo get_sub_field('full_width_background'); ?>')";>
+								<div class="page-width content-container">
+									<div class="container-inner">
 									<?php
 									if( $logoImage ):
-										echo '<div class="logoWrap">';
+										echo '<div class="logo-wrap">';
 										$imageID = $logoImage['ID'];
 										echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
 										echo '</div>';
 									endif;
 									if( get_sub_field('section_title') ):
-									echo '<h1 class="whiteText blockTitle"><span class="blackBack">' . get_sub_field('section_title') . '</span></h1>';
-									echo '<div class="iconWrap">';
+									echo '<h1 class="white-text block-title"><span class="black-back">' . get_sub_field('section_title') . '</span></h1>';
+									echo '<div class="icon-wrap">';
 									$imageID = $iconImage['ID'];
 									echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image', 'data-sizes' => 'auto' ) );
 									echo '</div>';
 									endif;
 									if( get_sub_field('section_sub_title') ):
-										echo '<h2 class="whiteGlow">' . get_sub_field('section_sub_title') . '</h2>';
+										echo '<h2 class="white-glow">' . get_sub_field('section_sub_title') . '</h2>';
 									endif;
 									if( get_sub_field('button') ):
 									?>
-									<div class="buttonWrapper">
-										<a href="<?php echo get_sub_field('button_url'); ?>" class="primaryButtonAlt"><?php echo get_sub_field('button'); ?></a>
+									<div class="button-wrapper">
+										<a href="<?php echo get_sub_field('button_url'); ?>" class="btn primary-button-alt"><?php echo get_sub_field('button'); ?></a>
 									</div>
 									<?php
 									endif;
@@ -87,12 +87,12 @@ get_header();
 									</div>
 								</div>
 							</div>
-							<div class="fullWidthBack" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
-								<div class="pageWidth paddedSection limitWidth">
+							<div class="full-width-back" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
+								<div class="page-width padded-section limit-width">
 								<?php
 								if (get_sub_field('copy_section_title')):
 								?>
-									<div class="centerText">
+									<div class="center-text">
 										<h3><?php echo get_sub_field('copy_section_title'); ?></h3>
 									</div>
 								<?php
@@ -109,8 +109,8 @@ get_header();
 						elseif( get_row_layout() == 'copy_block' ):
 						?>
 						<section id="<?php echo get_sub_field('section_name'); ?>">
-							<div class="fullWidthBack" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
-								<div class="pageWidth paddedSection limitWidth">
+							<div class="full-width-back" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
+								<div class="padded-section">
 									<?php echo get_sub_field('copy'); ?>
 								</div>
 							</div>
@@ -122,7 +122,7 @@ get_header();
 						elseif( get_row_layout() == 'full_width_image_block' ):
 						?>
 						<section id="<?php echo get_sub_field('section_name'); ?>">
-							<div class="pageWidth limitWidth">
+							<div class="page-width limit-width">
 							<?php
 							if (get_sub_field('image')):
 								$fullWidthImage = get_sub_field('image');
@@ -138,8 +138,8 @@ get_header();
 						//////////////////////////////////
 						elseif( get_row_layout() == 'brand_logos' ):
 						?>
-						<div class="limitWidth pageWidth">
-							<div class="brandLogos">
+						<div class="limit-width page-width">
+							<div class="brand-logos">
 								<?php
 									$image = get_sub_field('brand_logo_1');
 									$imageID = $image['ID'];
@@ -163,22 +163,22 @@ get_header();
 						//////////////////////////////////
 						elseif( get_row_layout() == 'customizable_75_25_2_column_block' ):
 						?>
-						<section id="<?php echo get_sub_field('section_id'); ?>" class="paddedSection">
+						<section id="<?php echo get_sub_field('section_id'); ?>" class="padded-section">
 						<?php
 							if(get_sub_field('section_background')):
 						?>
-							<div class="fullWidthBlock" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
+							<div class="full-width-block" style="background-image: url('<?php echo get_sub_field('section_background'); ?>')";>
 							<?php
 							endif;
 							?>
-								<div class="pageWidth flex-container centerAlignedContainer">
+								<div class="page-width flex-container center-aligned-container">
 									<div class="col70">
-										<div class="blockText">
+										<div class="block-text">
 											<?php echo get_sub_field('block_1_contents'); ?>
 										</div>
 									</div>
 									<div class="col30">
-										<div class="blockText">
+										<div class="block-text">
 											<?php echo get_sub_field('block_2_contents'); ?>
 										</div>
 									</div>
@@ -191,21 +191,21 @@ get_header();
 						//////////////////////////////////
 						elseif( get_row_layout() == 'two_column_block' ):
 						?>
-						<section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection">
-							<div class="pageWidth flex-container centerAlignedContainer paddedTop">
+						<section id="<?php echo get_sub_field('section_name'); ?>" class="padded-section">
+							<div class="page-width flex-container center-aligned-container padded-top">
 							<?php
 							$col_1 = get_sub_field('col_contents_1');
 							$col_2 = get_sub_field('col_contents_2');
 								if( $col_1 ): ?>
 									<div class="col50">
-										<div class="blockText">
+										<div class="block-text">
 											<?php echo $col_1 ?>
 										</div>
 									</div>
 								<?php endif;
 								if( $col_2 ): ?>
 									<div class="col50">
-										<div class="blockText">
+										<div class="block-text">
 											<?php echo $col_2 ?>
 										</div>
 									</div>
@@ -219,29 +219,29 @@ get_header();
 						//////////////////////////////////
 						elseif( get_row_layout() == 'three_column_block' ):
 						?>
-						<section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection">
-							<div class="pageWidth flex-container paddedTop">
+						<section id="<?php echo get_sub_field('section_name'); ?>" class="padded-section">
+							<div class="page-width flex-container padded-top">
 							<?php
 								$col_1 = get_sub_field('col_contents_1');
 								$col_2 = get_sub_field('col_contents_2');
 								$col_3 = get_sub_field('col_contents_3');
 									if( $col_1 ): ?>
 										<div class="col30">
-											<div class="blockText">
+											<div class="block-text">
 												<?php echo $col_1 ?>
 											</div>
 										</div>
 									<?php endif;
 									if( $col_2 ): ?>
 										<div class="col30">
-											<div class="blockText">
+											<div class="block-text">
 												<?php echo $col_2 ?>
 											</div>
 										</div>
 									<?php endif;
 									if( $col_3 ): ?>
 										<div class="col30">
-											<div class="blockText">
+											<div class="block-text">
 												<?php echo $col_3 ?>
 											</div>
 										</div>

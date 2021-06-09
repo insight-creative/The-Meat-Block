@@ -1,12 +1,12 @@
-<div class="socialWrapper">
+<div class="social-wrapper">
   <nav role="navigation" aria-label="social navigation">
     <a href="https://www.facebook.com/LamersBusLines/" target="_blank" role="link" aria-hidden="true" rel="noreferrer">
-      <div class="socialPadding">
+      <div class="social-padding">
         <img src="/wp-content/uploads/2019/05/f_logo_RGB-White_58_2.png" class="image socialIcon">
       </div>
     </a>
     <a href="https://twitter.com/LamersBusLines/" target="_blank" role="link" aria-hidden="true" rel="noreferrer">
-      <div class="socialPadding">
+      <div class="social-padding">
         <svg class="smallIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
             <symbol id="icon-twitter-square" viewBox="0 0 24 28">
@@ -15,11 +15,11 @@
             </symbol>
           </defs>
         </svg>
-      <svg class="footerSocialIcon icon-twitter-square"><use xlink:href="#icon-twitter-square"></use></svg>
+      <svg class="footer-social-icon icon-twitter-square"><use xlink:href="#icon-twitter-square"></use></svg>
       </div>
     </a>
     <a href="https://www.instagram.com/lamersbuslines/" target="_blank" role="link" aria-hidden="true" rel="noreferrer">
-      <div class="socialPadding">
+      <div class="social-padding">
         <svg class="smallIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
             <symbol id="icon-instagram" viewBox="0 0 32 32">
@@ -30,7 +30,7 @@
             </symbol>
           </defs>
         </svg>
-        <svg class="footerSocialIcon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+        <svg class="footer-social-icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
       </div>
     </a>
   </nav>
