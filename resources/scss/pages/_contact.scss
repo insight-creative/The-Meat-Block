@@ -18,7 +18,6 @@
 .gform_wrapper input[type="text"],
 .gform_wrapper input[type="email"],
 .gform_wrapper textarea {
-	border-radius: 5px;
 	border: 1px solid $darkGrey !important;
 	padding: 5px !important;
 }
@@ -46,17 +45,15 @@
 		box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.5);
 	}
 }
-#formWrap {
-	@include breakpoint(laptopScreen) {
-		margin-bottom: 50px;
-	}
-}
 .form-wrapper {
-	padding: 20px;
+	padding: 1rem;
 	background-color: $lightGrey;
 }
 .small-map-wrapper {
-	padding: 40px 20px 20px 20px;
+	padding: 2rem 0;
+	@include breakpoint(laptopScreen) {
+		padding: 2rem;
+	}
 }
 #thank-you {
 	background-image: url("/wp-content/uploads/2020/01/the-meat-block-foods-hero.jpg");

@@ -14,6 +14,21 @@
 			}
 		}
 	}
+	.woocommerce-error,
+	.woocommerce-info,
+	.woocommerce-message {
+		color: $darkCharcoal;
+		background-color: $lightGrey;
+	}
+	.tw-bs4 .alert-warning {
+		color: $darkCharcoal;
+		background-color: $lightGrey;
+		border-radius: 0;
+		border-top: 3px solid #b6ae8c;
+		border-right: 0;
+		border-bottom: 0;
+		border-left: 0;
+	}
 	.tw-bs4 .btn-primary {
 		background-color: $black !important;
 		border: $black;
@@ -31,35 +46,37 @@
 		}
 	}
 	.tw-bs4 a {
-		color: $black;
-		text-decoration: underline;
+		color: $accentColorDark;
 		&:hover,
 		&:focus {
-			color: $darkCharcoal;
+			color: $accentColor;
 		}
+	}
+	.tw-bs4 select,
+	.tw-bs4 input {
+		border-radius: 0;
 	}
 	.woocommerce .col2-set .col-1,
 	.woocommerce-page .col2-set .col-1 {
 		background: $lightGrey;
 	}
 	.woocommerce-billing-fields {
-		padding: 4rem 2rem 2rem 2rem;
+		padding: 2rem 1rem 1rem 1rem;
 	}
 	.woocommerce-account-fields,
 	.woocommerce-shipping-fields h3 {
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 	.woocommerce-additional-fields {
-		padding: 2rem;
+		padding: 1rem;
 	}
 	.checkout input,
 	.checkout textarea {
-		border-radius: 5px;
 		border: 1px solid $darkGrey !important;
-		padding: 5px !important;
+		padding: 10px !important;
 	}
 	.select2-selection {
-		border-radius: 5px;
+		border-radius: 0;
 		border: 1px solid $darkGrey !important;
 	}
 	p {
@@ -68,12 +85,25 @@
 	.woocommerce table.shop_table {
 		border: 0 !important;
 	}
+	.validate-email {
+		float: none !important;
+		width: 99% !important;
+	}
+	#ship-to-different-address {
+		position: relative;
+		left: 3px;
+	}
+	.col-2 {
+		margin-top: 2rem;
+		@include breakpoint(laptopScreen) {
+			margin-top: 0;
+		}
+	}
 	.woocommerce-checkout-payment {
 		background: $lightGrey !important;
 		border-radius: 0 !important;
 		.payment_box {
 			background: $white !important;
-			border-radius: 5px !important;
 			&:before {
 				display: none !important;
 			}
@@ -82,6 +112,9 @@
 				padding: 0 !important;
 			}
 		}
+	}
+	.woocommerce form .form-row .required {
+		color: $accentColorDark;
 	}
 }
 .checkout-button {

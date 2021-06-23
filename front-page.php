@@ -322,7 +322,7 @@ get_header();
 				<div class="page-width">
 					<div class="testimonial-inner">
 						<div class="testimonial">
-						<p><em>The meat from the Meat Block is the best in the area. If you want hand cut, hand selected meat that’s marbled to perfection visit The Meat Block. You won’t regret it!</em><br>
+						<p><em>The meat from The Meat Block is the best in the area. If you want hand cut, hand selected meat that’s marbled to perfection visit The Meat Block. You won’t regret it!</em><br>
 						– Jay Bauer, Little Chute, WI</p>
 						</div>
 					</div>

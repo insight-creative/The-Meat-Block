@@ -24,7 +24,7 @@
                                     <a href="/foods/seafood" class="mega-menu__link">Seafood</a>
                                 </li>
                                 <li class="mega-menu__list-item">
-                                    <a href="/foods/homemade-sausage-and-cured-cuts" class="mega-menu__link">Homemade Sausage and Cured Cuts</a>
+                                    <a href="/product-category/foods/homemade-sausage-and-cured-cuts/" class="mega-menu__link">Homemade Sausage and Cured Cuts</a>
                                 </li>
                                 <li class="mega-menu__list-item">
                                     <a href="/foods/cheese-and-sliced-deli-meats" class="mega-menu__link">Cheese and Sliced Deli Meats</a>

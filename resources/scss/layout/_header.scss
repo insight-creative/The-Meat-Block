@@ -235,9 +235,6 @@ nav {
 .menu-button-wrap {
 	display: flex;
 	width: 20%;
-	@include breakpoint(smallScreen) {
-		padding: 15px 0 15px 15px;
-	}
 	@include breakpoint(laptopScreen) {
 		display: none;
 	}

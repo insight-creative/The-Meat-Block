@@ -11,16 +11,4 @@
         ) );
       ?>
   </div>
-  <div id="foods">
-    <h3>Foods</h3>
-    <?php
-        wp_nav_menu( array(
-            'theme_location'    => 'FoodMenu',
-            'container_class'				=> 'foodMenu',
-            'depth'             => 4,
-            'container'         => false,
-            'items_wrap' 				=> '%3$s'
-        ) );
-      ?>
-  </div>
 </div>

@@ -37,10 +37,6 @@ get_header();
 					wp_reset_postdata();
 				?>
 				</ul>
-				<!-- <h3>Blog Posts</h3>
-				<ul class="newsPosts">
-					<!-- <?php wp_get_archives('type=alpha'); ?> -->
-				<!-- </ul> -->
 			</div>
 		</div>
 	</main>

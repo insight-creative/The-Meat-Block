@@ -71,8 +71,12 @@
 	background-color: $accentColor;
 	color: $white;
 	border: none;
-	height: 32px;
-	width: 32px;
+	height: 26px;
+	width: 26px;
+	@include breakpoint(tabletScreen) {
+		height: 32px;
+		width: 32px;
+	}
 }
 .qty {
 	border: 1px solid $charcoal;

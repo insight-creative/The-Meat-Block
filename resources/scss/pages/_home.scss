@@ -22,9 +22,9 @@
 		width: 20%;
 		height: auto;
 		position: relative;
-		top: -20px;
+		top: -14px;
 		@include breakpoint(laptopScreen) {
-			top: -30px;
+			top: -24px;
 		}
 	}
 }
